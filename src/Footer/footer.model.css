@@ -1,0 +1,19 @@
+footer{
+    background-color:#2D3436;
+    color: white;
+}
+
+.linksContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.linksContainer a{
+    padding: 10px;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: right;
+}
