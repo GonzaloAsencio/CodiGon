@@ -1,0 +1,19 @@
+header{
+    background-color:#0984E3;
+    color:white;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.header-logo{
+    width: 10%;
+}
+.header-buttons{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
