@@ -1,0 +1,23 @@
+.body-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.images-carousell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-height: 1000px;
+  max-width: 500px;
+}
+
+.separador{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
