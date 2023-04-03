@@ -12,8 +12,6 @@ transition:1s;
 }
 `;
 
-
-
 export default function Carousel (){
     const images = ['programacion-software.png','scratch.png']
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -54,7 +52,7 @@ export default function Carousel (){
             />
             <div className="carouselButtonConteiner">
                 <button onClick={previous}>{"<"}</button>
-                <button onClick={next} buttonRight>{">"}</button>
+                <button onClick={next}>{">"}</button>
             </div>
         </div>
     );
