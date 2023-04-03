@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 .images-carousell{
   display: flex;
@@ -13,11 +12,11 @@
   max-height: 1000px;
   max-width: 500px;
 }
-
-.separador{
+.separetor{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding:20px;
 }
