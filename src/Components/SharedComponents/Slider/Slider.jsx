@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import {useRef,useEffect,useState} from "react";
 //Se tiene que cargar el objeto y no la imagen.
-import images from "../LandingPageImages";
+import images from "../../../assets/Image/LandingPageImages";
 import "./Slider.css";
 
 function Slider() {

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Main.css';
-import Separetor from './assets/sharedComponent/IconSeparetor/Separetor';
-import Carousel from './Carousel';
-import Slider from './assets/sharedComponent/Slider/Slider';
+import Separetor from '../SharedComponents/IconSeparetor/Separetor';
+import Carousel from '../SharedComponents/Carousel/Carousel';
+import Slider from '../SharedComponents/Slider/Slider';
 
 
 function Main() {

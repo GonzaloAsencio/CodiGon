@@ -45,7 +45,7 @@ export default function Carousel (){
     return (
         <div  className="carouselConteiner">
             <CarouselImg
-            src={require(`./assets/Image/Main/${selectedImage}`)}
+            src={require(`../../../assets/Image/Main/${selectedImage}`)}
             alt=""
             className={loaded ? "loaded" : ""}
             onLoad={()=>setLoaded(true)}
