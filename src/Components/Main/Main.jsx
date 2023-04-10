@@ -3,6 +3,7 @@ import './Main.css';
 import Separetor from '../SharedComponents/IconSeparetor/Separetor';
 import Carousel from '../SharedComponents/Carousel/Carousel';
 import Slider from '../SharedComponents/Slider/Slider';
+import Card from '../SharedComponents/Card/Cards';
 
 
 function Main() {
@@ -17,15 +18,13 @@ function Main() {
             <h2>TUTORIALES</h2>
             <Separetor iconCounter={2}/>
           </div>
-          <div>
-            <Slider/>
-          </div>
         </div>
+          <Card/>
         <div>
             <h2>Ver mas tutoriales</h2>
         </div>
         <div>
-         <Separetor iconCounter={6}/>
+         <Separetor iconCounter={5}/>
         </div>
       </div>
   );
