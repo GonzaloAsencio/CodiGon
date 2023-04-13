@@ -15,9 +15,7 @@ function Footer() {
                     <a href="#">Twitter</a>
                     </div>
                 </div>
-            </div>
-            <div className='logoContainer'>
-                <p>LOGO</p>
+                <h2>LOGO</h2>
             </div>
         </footer>
     );

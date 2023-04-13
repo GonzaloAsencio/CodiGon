@@ -15,6 +15,7 @@
   max-height: 1500px;
   max-width: 1200px;
 }
+
 .separetor{
   display: flex;
   flex-wrap: nowrap;
@@ -26,6 +27,5 @@
 
 .separetor > h2{
   margin: 0px;
-  padding: 5px;
   font-size: 18px;
 }
