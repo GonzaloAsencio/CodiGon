@@ -1,9 +1,8 @@
 import React from 'react';
 import './Card.css';
 
-//Falta enviarle el icono tambien
 function Card({title, description, image,url,icon,color}) {
-    const stylesObj = {
+    const cardStyle = {
         background: color
       };
 return (
@@ -15,7 +14,7 @@ return (
             <div className='card-icon-image'>
                 <img src={icon} alt=''/>
             </div>
-            <div className='card-text-conteiner' style = {stylesObj}>
+            <div className='card-text-conteiner' style = {cardStyle}>
                 <h2 className='card-tittle'>{title}</h2>
                 <p className='card-text text-secondary'>
                 { description ? description :
@@ -23,7 +22,7 @@ return (
                 }
                 </p>
             </div>
-            <button style = {stylesObj}>
+            <button style = {cardStyle }>
                 <a href={url}>View More</a>
             </button>
         </div>

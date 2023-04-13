@@ -20,11 +20,12 @@
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
   align-items: center;
-
 }
 
 .separetor > h2{
+  margin: 0px;
   padding: 5px;
-  font-size: 12px;
+  font-size: 18px;
 }

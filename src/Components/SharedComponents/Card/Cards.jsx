@@ -4,6 +4,7 @@ import "./Card.css";
 import image from '../../../assets/Image/Holder/614e5365a3d18.jpg';
 import icon from '../../../assets/Image/Holder/csharpicon.png';
 
+//HAY QUE LLAMAR AL OBJETO DIRECTAMENTE.
 const cards= [
     {
         id:1,
@@ -40,7 +41,6 @@ const cards= [
         description:"",
         title:"SOY EL CUARTO",
         icon:icon,
-   
 
     },
     {
