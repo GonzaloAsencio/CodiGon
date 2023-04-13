@@ -2,7 +2,6 @@ import React from 'react';
 import './Main.css';
 import Separetor from '../SharedComponents/IconSeparetor/Separetor';
 import Carousel from '../SharedComponents/Carousel/Carousel';
-import Slider from '../SharedComponents/Slider/Slider';
 import Card from '../SharedComponents/Card/Cards';
 
 
