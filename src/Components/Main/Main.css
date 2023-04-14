@@ -29,3 +29,41 @@
   margin: 0px;
   font-size: 18px;
 }
+
+.tutorials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.tutorials > h2{
+  position: relative;
+  padding: 10px;
+  margin: 0px;
+}
+.tutorials > h2::before{
+  right: 80%;
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 2px solid #707070;
+  width: 20vw;
+  margin: 0 40px;
+  }
+  .tutorials > h2::after{
+    left: 80%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid #707070;
+    width: 20vw;
+    margin: 0 40px;
+    }
+.black-line{
+  height: 2px;
+  min-width: 80px;
+  width: 100%;
+  background-color: black;
+}

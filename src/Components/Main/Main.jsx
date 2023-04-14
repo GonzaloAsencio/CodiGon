@@ -1,6 +1,5 @@
 import React from 'react';
 import './Main.css';
-import SeparatorText from '../SharedComponents/IconWithTextSeparetor/index';
 import IconSeparetor from '../SharedComponents/IconSeparetor/IconSeparetor';
 import Carousel from '../SharedComponents/Carousel/Carousel';
 import Card from '../SharedComponents/Card/Cards';
@@ -13,10 +12,12 @@ function Main() {
           <Carousel/>
         </div>
         <div className='images-select'>
-         <SeparatorText text={"TUTORIALES"}/>
+          <div className='tutorials'>
+            <h2>TUTORIALES</h2>
+        </div>
         </div>
           <Card/>
-        <div>
+        <div className='see-more-tutorials'>
             <h2>Ver mas tutoriales</h2>
         </div>
         <IconSeparetor amount={iconAmount().amount}/>
