@@ -6,8 +6,6 @@ import Carousel from '../SharedComponents/Carousel/Carousel';
 import Card from '../SharedComponents/Card/Cards';
 import iconAmount from '../SharedComponents/IconSeparetor/IconCounter';
 
-
-
 function Main() {
   return (
       <div className='body-conteiner'>

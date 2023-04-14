@@ -4,7 +4,7 @@ import './footer.model.css';
 function Footer() {
     return(
         <footer className='footer'>
-            <div className='linksContainer'>
+            <div className='links-container'>
                 <a>Quienes Somos</a>
                 <a>Contacto</a>
                 <div class="dropdown">

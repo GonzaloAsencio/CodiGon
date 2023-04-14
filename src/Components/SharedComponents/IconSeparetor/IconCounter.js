@@ -6,12 +6,10 @@ var notebook = window.matchMedia("(max-width: 1366px)");
 var pc = window.matchMedia("(max-width: 1920px)");
 
 function iconAmount() {
-
     const amountIcon = {
         amountText:0,
         amount:0,
       };
-
     if (mobileSmall.matches){
         amountIcon.amountText = 1;
         amountIcon.amount= 3;

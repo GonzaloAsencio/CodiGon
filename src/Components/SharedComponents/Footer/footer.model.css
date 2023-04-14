@@ -4,20 +4,26 @@ footer{
     bottom: 0;
 }
 
-.linksContainer{
+.links-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: flex-end;
+    font-size: 10px;
 }
-.linksContainer a{
+
+.links-container > a{
     padding: 10px;
+}
+
+.links-container > h2{
+    padding: 0px 15px 0px 15px;
 }
 
 .logoContainer{
     display: flex;
     justify-content: right;
 }
+
 
 .menu{
     border: none;
