@@ -18,7 +18,11 @@ function Main() {
         </div>
           <Card/>
         <div className='see-more-tutorials'>
-            <h2>Ver mas tutoriales</h2>
+            <ul>
+              <li>
+                <a href='' data-text="&nbsp;Ver&nbsp;mas">&nbsp;ver mas&nbsp;</a>
+              </li>
+            </ul>
         </div>
         <IconSeparetor amount={iconAmount().amount}/>
       </div>

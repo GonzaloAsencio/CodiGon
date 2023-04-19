@@ -15,7 +15,6 @@ function Footer() {
                     <a href="#">Twitter</a>
                     </div>
                 </div>
-                <h2>LOGO</h2>
             </div>
         </footer>
     );
