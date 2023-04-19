@@ -14,10 +14,10 @@
     cursor: pointer;
     align-items: center;
     text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
     border: none;
+    background:none;
+    color: white;
+    font-size: 30px;
     bottom: 50%;
     transition-duration: 0.4s;
 }
@@ -33,4 +33,4 @@
 .carouselButton:hover {
     background-color: gray;
     color: white;
-  }
+}

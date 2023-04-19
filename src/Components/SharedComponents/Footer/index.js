@@ -2,10 +2,9 @@
 import './footer.model.css';
 
 function Footer() {
-
     return(
         <footer className='footer'>
-            <div className='linksContainer'>
+            <div className='links-container'>
                 <a>Quienes Somos</a>
                 <a>Contacto</a>
                 <div class="dropdown">
@@ -16,9 +15,6 @@ function Footer() {
                     <a href="#">Twitter</a>
                     </div>
                 </div>
-            </div>
-            <div className='logoContainer'>
-                <p>LOGO</p>
             </div>
         </footer>
     );

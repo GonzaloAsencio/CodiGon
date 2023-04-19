@@ -13,7 +13,7 @@ transition:1s;
 `;
 
 export default function Carousel (){
-    const images = ['programacion-software.png','scratch.png']
+    const images = ['progrmacion.png','sc2ng.png']
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedImage,setSelectedImage] = useState(images[0]);
     const [loaded, setLoaded] = useState(false);
