@@ -6,7 +6,7 @@ function Card({title, description, image,url,icon,color}) {
         background: color
       };
 return (
-    <div className='card'>
+    <div className='card' style = {cardStyle} >
         <div className='card-body'>
             <div className='card-image'>
                 <img src={image} alt=''/>
@@ -22,7 +22,7 @@ return (
                 }
                 </p>
             </div>
-            <button style = {cardStyle }>
+            <button style = {cardStyle}>
                 <a href={url}>View More</a>
             </button>
         </div>
