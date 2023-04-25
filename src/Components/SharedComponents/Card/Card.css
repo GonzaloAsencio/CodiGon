@@ -112,3 +112,22 @@
     }
 }
 
+
+@media screen and (min-width: 1366px) {
+    .card{
+        max-width: 400px;
+     }
+     .card-image{
+        max-height: 250px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .card{
+        max-width: 600px;
+     }
+     .card-image{
+        max-height: 350px;
+    }
+}
+

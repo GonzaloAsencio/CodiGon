@@ -17,6 +17,12 @@
     background: lightblue;
 }
 
+.sliderConteiner{
+    margin: 0 auto;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 .carousel {
     cursor: grab;
     overflow: hidden;
