@@ -4,6 +4,7 @@ import "./Card.css";
 import image from '../../../assets/Image/Holder/614e5365a3d18.jpg';
 import icon from '../../../assets/Image/Holder/csharpicon.png';
 
+
 //HAY QUE LLAMAR AL OBJETO DIRECTAMENTE.
 const cards= [
     {
@@ -11,9 +12,10 @@ const cards= [
         Image:image,
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
         description:"",
-        title:"My Title",
+        title:"My Unity",
         icon:icon,
-
+        color :"",
+        languague: "unity"
     },
     {
         id:2,
@@ -21,7 +23,8 @@ const cards= [
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
         title:"My Title",
         icon:icon,
-
+        color :"",
+        languague:"unity"
 
     },
     {
@@ -31,6 +34,8 @@ const cards= [
         description:"",
         title:"SOY EL TERCERO",
         icon:icon,
+        color :"",
+        languague:"unity"
 
 
     },
@@ -41,6 +46,8 @@ const cards= [
         description:"",
         title:"SOY EL CUARTO",
         icon:icon,
+        color :"",
+        languague: "unity"
 
     },
     {
@@ -50,6 +57,8 @@ const cards= [
         description:"",
         title:"SOY EL QUINTO",
         icon:icon,
+        color :"",
+        languague:"unity"
 
 
     },
@@ -60,28 +69,72 @@ const cards= [
         description:"",
         title:"SOY EL SEXTO",
         icon:icon,
+        color :"",
+        languague:"unity"
+
+
+    },
+    {
+        id:7,
+        Image:image,
+        url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
+        description:"",
+        title:"SOY EL CUARTO",
+        icon:icon,
+        color :"",
+        languague: "csharp"
+
+    },
+    {
+        id:8,
+        Image:image,
+        url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
+        description:"",
+        title:"SOY EL QUINTO",
+        icon:icon,
+        color :"",
+        languague: "Csharp"
+
+
+    },
+    {
+        id:9,
+        Image:image,
+        url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
+        description:"",
+        title:"SOY EL SEXTO",
+        icon:icon,
+        color :"",
+        languague: "Csharp"
 
 
     }
 ]
-var initialPosition =0;
+
  function CalculateColor(){
-    var printColor;
+    var initialColor =0;
     var ColorPallete=["#55efc4","#81ecec","#74b9ff","#fab1a0","#ff7675","#fd79a8"];
-    printColor = ColorPallete[initialPosition];
-    if(initialPosition > ColorPallete.length){
-        initialPosition = 0;
-    } else  initialPosition++;
-    return(printColor);
+     cards.forEach(element => {
+        if(element.color === ""){
+            element.color = ColorPallete[initialColor];
+            initialColor++;
+            if(initialColor >= ColorPallete.length){
+                initialColor =0;
+            }
+        }
+    });
 }
 
-function Cards(){
+function Cards({search}){
+CalculateColor();
 return(
     <div className="cards">
         {
-            cards.map( card => (
+            cards.filter((item) =>{
+                    return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search) || item.languague.toLowerCase().includes(search) ;
+            }).map(card => (
                 <div className="cards-conteiner" key={card.id}>
-                <Card title={card.title} description={card.description} image={card.Image} url={card.url} icon ={icon} color={CalculateColor()}/>
+                <Card title={card.title} description={card.description} image={card.Image} url={card.url} icon ={icon} color={card.color}/>
                  </div>
             ))
         }

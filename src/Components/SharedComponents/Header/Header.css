@@ -1,6 +1,7 @@
 header{
     background-color:#0984E3;
     color:white;
+    margin: 0px;
 }
 
 .header-nav{
@@ -24,16 +25,18 @@ padding-left: 10px;
 
 .header-buttons :first-child{
    font-weight: bold;
+
 }
 
 .header-buttons :nth-child(2){
     color:#dfe6e9;
+
  }
 
 
 @media screen and (min-width: 720px) {
     header{
-        font-size: 24px;
+        font-size: 20px;
     }
     .header-buttons{
         padding-right: 25px;
@@ -42,7 +45,7 @@ padding-left: 10px;
 
 @media screen and (min-width: 1366px) {
     header{
-        font-size: 36px;
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 1920px) {

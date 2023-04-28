@@ -14,7 +14,7 @@ function Slider() {
     return (
         <div className="sliderConteiner">
             <motion.div ref={carousel} className="carousel" whileTap={{cursor:"grabbing"}}>
-                <motion.div initial={{x:200}} animate={{x:0}} dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} drag="x" dragConstraints={{right: 0, left:-width}} className="inner-carousel">
+                <motion.div animate={{x:0}} dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} drag="x" dragConstraints={{right: 0, left:-width}} className="inner-carousel">
                     {images.map((image,index) => {
                         return (
                             <motion.div className="item" key={index} >
