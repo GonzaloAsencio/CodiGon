@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css';
+import { Link } from 'react-router-dom';
 import IconSeparetor from '../SharedComponents/IconSeparetor/IconSeparetor';
 import Carousel from '../SharedComponents/Carousel/Carousel';
 import Card from '../SharedComponents/Card/Cards';
@@ -21,12 +22,14 @@ function Main() {
           </div>
         </div>
           <div className='card-conteiner'>
-            <Card/>
+            <Card search={""}/>
           </div>
         <div className='see-more-tutorials'>
             <ul>
               <li>
-                <a href='' data-text="&nbsp;Ver&nbsp;mas">&nbsp;ver mas&nbsp;</a>
+                <Link to="/tutorial">
+                <a data-text="&nbsp;Ver&nbsp;mas">&nbsp;ver mas&nbsp;</a>
+                </Link>
               </li>
             </ul>
         </div>
