@@ -1,13 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import './Card.css';
 
 function Card({title, description, image,url,icon,color}) {
     const cardStyle = {
-        background: color
+        background: color,
       };
 return (
     <div className='card' style = {cardStyle} >
         <div className='card-body'>
+            <a href={url}/>
             <div className='card-image'>
                 <img src={image} alt=''/>
             </div>
@@ -18,17 +20,13 @@ return (
                 <h2 className='card-tittle'>{title}</h2>
                 <p className='card-text text-secondary'>
                 { description ? description :
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit '
                 }
                 </p>
             </div>
-            <button style = {cardStyle}>
-                <a href={url}>View More</a>
-            </button>
         </div>
 
     </div>
-
 );
 }
 export default Card;

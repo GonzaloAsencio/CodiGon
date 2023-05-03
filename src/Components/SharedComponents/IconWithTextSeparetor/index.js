@@ -4,7 +4,6 @@ import iconAmount from '../IconSeparetor/IconCounter';
 
 function Separator({text}) {
     var  amount = iconAmount().amountText;
-    console.log(amount);
 return (
     <div className='separetor'>
     <IconSeparetor amount={amount}/>

@@ -1,7 +1,4 @@
 header{
-    position: sticky;
-    top: 0;
-    z-index: 999;
     background-color:#0984E3;
     color:white;
     margin: 0px;
@@ -24,12 +21,18 @@ padding-left: 10px;
     align-items: center;
     justify-content: center;
     padding-right: 10px;
-    text-decoration: none,
 }
 
-.header-buttons > ul{
-    margin: 0;
+.headerText{
+   font-weight: bold;
+   font-size: 200px;
 }
+
+.header-buttons :nth-child(2){
+    color:#dfe6e9;
+
+ }
+
 
 @media screen and (min-width: 720px) {
     header{
