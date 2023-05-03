@@ -1,8 +1,8 @@
 .tutorial-conteiner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 /*CREAR UN COMPONENTE COMPARTIDO PARA EL SEARCH*/
@@ -33,15 +33,20 @@
     padding: 30px;
 }
 
+.special{
+    color: #6c5ce7;
+    border-width: 0px;
+    border-bottom: 5px solid #6c5ce7;
+}
+
 .buttons> button{
     background: none;
-    border: none;
     cursor: pointer;
     font-size: 32px;
     font-weight: bold;
     margin: 0em 5em 0em 5em;
-    border-bottom: 3px solid black;
 }
+
 
 
 

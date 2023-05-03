@@ -21,7 +21,7 @@ const cards= [
         id:2,
         Image:image,
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
-        title:"My Title",
+        title:"My Unity",
         icon:icon,
         color :"",
         languague:"unity"
@@ -79,7 +79,7 @@ const cards= [
         Image:image,
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
         description:"",
-        title:"SOY EL CUARTO",
+        title:"SOY EL Septimo",
         icon:icon,
         color :"",
         languague: "csharp"
@@ -90,7 +90,7 @@ const cards= [
         Image:image,
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
         description:"",
-        title:"SOY EL QUINTO",
+        title:"SOY EL Octabo",
         icon:icon,
         color :"",
         languague: "Csharp"
@@ -102,12 +102,10 @@ const cards= [
         Image:image,
         url:"https://www.youtube.com/watch?v=ZZ5LpwO-An4&t=2s",
         description:"",
-        title:"SOY EL SEXTO",
+        title:"SOY EL noveno",
         icon:icon,
         color :"",
         languague: "Csharp"
-
-
     }
 ]
 
@@ -124,6 +122,8 @@ const cards= [
         }
     });
 }
+
+//FALTA SOLUCIONAR CUANDO BORRO LO QUE ESTOY BUSCANDO EN UN BOTON, SE REINICIA
 
 function Cards({search}){
 CalculateColor();
