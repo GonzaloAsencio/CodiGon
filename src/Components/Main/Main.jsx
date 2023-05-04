@@ -32,8 +32,8 @@ function Main() {
           <div className='see-more-tutorials'>
               <ul>
                 <li>
-                  <Link to="/tutorial">
-                  <a data-text="&nbsp;Ver&nbsp;mas">&nbsp;ver mas&nbsp;</a>
+                  <Link to="/tutorial" className='link' data-text="&nbsp;Ver&nbsp;mas" >
+                    &nbsp;ver mas&nbsp;
                   </Link>
                 </li>
               </ul>

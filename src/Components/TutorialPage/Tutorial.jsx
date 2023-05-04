@@ -9,12 +9,14 @@ import Footer from '../SharedComponents/Footer';
 
 function Tutorial() {
   const [searchText,setSeach] = useState('');
-  const btnElList = document.querySelectorAll('.btn');
+  const buttonList = document.querySelectorAll('.btn');
 
-  btnElList.forEach(element => {
+  buttonList.forEach(element => {
     element.addEventListener('click',() => {
-      document.querySelector('.special')?.classList.remove('special');
-      element.classList.add('special');
+      document.querySelector('.selected-button')?.classList.add('btn');
+      document.querySelector('.selected-button')?.classList.remove('selected-button');
+      element.classList.remove('btn');
+      element.classList.add('selected-button');
     })
   });
 
@@ -23,8 +25,8 @@ function Tutorial() {
     <Header/>
       <div className='tutorial-conteiner'>
          <div className='buttons'>
-            <button className='unityButton' class='btn' onClick={()=> setSeach('unity')}>UNITY</button>
-            <button className='csharpButton'class='btn' onClick={()=> setSeach('csharp')}>C#</button>
+            <button  class='btn' onClick={()=> setSeach('unity')}>UNITY</button>
+            <button class='btn' onClick={()=> setSeach('csharp')}>C#</button>
           </div>
           <div className='search-bar'>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
