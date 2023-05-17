@@ -8,27 +8,30 @@ import {faEnvelope,faEnvelopeOpen} from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
   useEffect(()=> {
-    const xd = document.querySelector('.circlexd');
-    const xd2 = document.querySelector('.message-inputs');
-    const xd3 = document.querySelector('.msgicon');
-    const xd4 = document.querySelector('.msgiconOpen');
-    xd.addEventListener("click", ()=> {
-      xd.classList.toggle("Animation");
-      xd3.style.display='none';
-      xd4.style.visibility = 'visible';
-      xd.onanimationend = () => {
-        xd.style.display='none'; // hide the element after animation
+    const messageCircle = document.querySelector('.messageIcon');
+    const messageInputs = document.querySelector('.message-inputs');
+    const messageIcon = document.querySelector('.msgicon');
+    const messageOpenIcon = document.querySelector('.msgiconOpen');
+    messageCircle.addEventListener("click", ()=> {
+      messageCircle.classList.toggle("disappear-animation");
+      messageIcon.style.display='none';
+      messageOpenIcon.style.visibility = 'visible';
+      messageCircle.onanimationend = () => {
+        messageCircle.style.display='none';
       };
-      xd2.classList.toggle("backUp");
+      messageInputs.classList.toggle("appear-animation");
     });
   },[]);
 
   return (
     <div className='contact-me'>
         <div className='message-container'>
-          <h2>ESCRIBIME UN MENSAJE</h2>
+          <div className='message-title'>
+            <h2>¿QUERES CONTACTARTE CONMIGO?</h2>
+            <h2>ENVIAME UN MENSAJE</h2>
+          </div>
           <div className='message-text'>
-              <button className='circlexd'><FontAwesomeIcon className='msgicon' icon={faEnvelope}/><FontAwesomeIcon className='msgiconOpen' icon={faEnvelopeOpen}/></button>
+              <button className='messageIcon'><FontAwesomeIcon className='msgicon' icon={faEnvelope}/><FontAwesomeIcon className='msgiconOpen' icon={faEnvelopeOpen}/></button>
               <div className='message-inputs'>
                 <div className='from-input-container'>
                   <input type="text" placeholder='Nombre' className='from-input'/>
