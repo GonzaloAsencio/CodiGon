@@ -1,7 +1,7 @@
 /*--- Card Size ---*/
 .card{
    border-radius: 15px;
-   max-width: 150px;
+   max-width: 100vh;
    border-radius: 15px;
    cursor:pointer;
 }
@@ -41,7 +41,7 @@
 .card-image{
     width: 100% ;
     overflow: hidden;
-    max-height: 100px;
+    max-height: 40vw;
     margin: 0px;
 }
 

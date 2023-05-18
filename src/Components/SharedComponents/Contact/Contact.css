@@ -1,0 +1,251 @@
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgba(162, 155, 254, 0.6);
+    width: 100%;
+}
+.contact-me-image {
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+.contact-me-image > img {
+    width: 150px;
+    height: 150px;
+    animation:--PaperFly , --Appear;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    bottom: 0;
+    left: 0;
+}
+.message-title{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.message-title > h2 {
+    margin: 0.5rem;
+}
+.message-title > h2:nth-child(1){
+
+    font-size: 1.2rem;
+}
+.message-title > h2:nth-child(2){
+
+    font-size: 1rem;
+}
+.message-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.message-container > input{
+    width: 50%;
+    height: 5%;
+    margin: 5px;
+}
+.message-container > h2{
+  color: white;
+}
+.message-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.message-inputs{
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+.from-text-area{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    border-style: none;
+    width: 100%;
+    outline: solid 1.2px #6c5ce7 ;
+}
+.from-text-area:focus{
+    outline: solid 2px #6c5ce7 ;
+}
+.from-text-button{
+    background-color: white;
+    color: #6c5ce7;
+    border: 1px solid #6c5ce7;;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.from-text-button:active{
+    background-color: #6c5ce7;
+    color: white;
+}
+.from-input-container{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.from-input{
+    width: 100%;
+    height:1.5rem;
+    margin: 0;
+    padding:0;
+    border-radius: 2px;
+    border-style: none;
+    outline: solid 1.2px #6c5ce7 ;
+}
+.from-input::placeholder {
+    color:#b2bec3 ;
+}
+.from-input:focus{
+    outline: solid 2px #6c5ce7 ;
+}
+.messageIcon{
+    border: none;
+    position: absolute;
+    z-index: 999;
+    width: 5rem;
+    height:5rem;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.disappear-animation{
+    animation-name:--Disapear ;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+.appear-animation{
+    animation-name: --Appear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0.3s;
+}
+.msgicon{
+    position: relative;
+    height: 25%;
+    animation-name: --RingRing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: #6c5ce7;
+}
+.msgiconOpen{
+    visibility: hidden;
+    position: absolute;
+    color: #6c5ce7;
+    height: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@keyframes --Disapear {
+    0% {opacity: 1;}
+    50% {opacity:0.5;}
+    100% {opacity:0;}
+}
+
+@keyframes --PaperFly {
+    from{
+        transform: translate(-50px, 50px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes --RingRing{
+      0%{
+        transform: rotate(0deg);
+      }
+      25%{
+        transform: rotate(45deg);
+      }
+      50%{
+        transform: rotate(-45deg);
+      }
+      100%{
+        transform: rotate(0deg);
+      }
+}
+
+@keyframes --Appear {
+    0% {opacity: 0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+
+
+@media screen and (min-width: 720px) {
+    .message-inputs{
+        width: 30%;
+        height: 30%;
+
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .contact-me{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .contact-me-image {
+        display: contents;
+    }
+    .message-container{
+      width: 50%;
+    }
+    .contact-me{
+        justify-content: space-evenly;
+    }
+    .from-input{
+        height:1.8rem;
+    }
+
+}
+
+@media screen and (min-width: 1366px) {
+    .contact-me{
+        justify-content: space-evenly;
+    }
+    .message-title > h2:nth-child(1){
+        font-size: 35px;
+    }
+    .message-title > h2:nth-child(2){
+        font-size: 18px;
+    }
+    .from-input{
+        height:2rem;
+    }
+    .contact-me-image > img {
+        width: 170px;
+        height: 170px;
+    }
+    .messageIcon{
+        width: 7rem;
+        height:7rem;
+    }
+}

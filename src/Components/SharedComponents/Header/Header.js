@@ -9,7 +9,6 @@ let inicioStyle;
 let tutorialStyle;
 
 function Header() {
-  
   const pointerStyle = {
     fontWeight: 'bold',
     color:'white',
