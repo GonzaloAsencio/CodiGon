@@ -2,7 +2,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000000;
-    background-color:#0984E3;
+    background-color:#74b9ff;
     color:white;
     margin: 0px;
     width: 100%;
@@ -25,11 +25,20 @@ padding-left: 10px;
     align-items: center;
     justify-content: center;
     padding-right: 10px;
-    text-decoration: none,
+    text-decoration: none;
+    display: none;
 }
 
 .header-buttons > ul{
     margin: 0;
+}
+
+.header-down{
+   background-color:#0984E3;
+}
+
+.header-down > .header-nav > .header-buttons{
+    display: flex;
 }
 
 @media screen and (min-width: 720px) {

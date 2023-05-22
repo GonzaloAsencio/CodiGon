@@ -1,0 +1,114 @@
+.introduction{
+  display: flex;
+  background-color: #81ecec;
+  color: white;
+  text-shadow: 2px 2px 3px #00cec9;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.introduction-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.introduction-image > img{
+  width: 40%;
+  height: 40%;
+  animation-name:  --SlideInLeft, --Appear;
+  animation-duration: 2s;
+}
+
+.introduction-description > button {
+  background-color: #fdcb6e;
+  color: white;
+  border: 1px solid #fdcb6e;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 2px;
+  font-weight: bold;
+  animation-name:  --SlideInRight, --Appear;
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.introduction-description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction-description > h2:nth-child(1){
+  animation: --Appear;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.introduction-description > h2:nth-child(2){
+    display: none;
+}
+
+
+.introduction > .introduction-image:nth-child(2) {
+   flex-direction: row-reverse;
+}
+
+.introduction > .introduction-image:nth-child(2) > img{
+    opacity: 0;
+    animation-name:  --SlideInRight, --Appear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.introduction > .introduction-image:nth-child(2) > .introduction-description > h2:nth-child(1){
+    animation-delay: 2s;
+}
+.introduction > .introduction-image:nth-child(2) > .introduction-description > button{
+    animation-name:  --SlideInLeft, --Appear;
+    animation-delay: 2.5s;
+}
+
+@keyframes --Appear {
+  0% {opacity: 0;}
+  50% {opacity:0.5;}
+  100% {opacity:1;}
+}
+@keyframes --SlideInLeft {
+  from{
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+@keyframes --SlideInRight {
+  from{
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 720px) {
+    .introduction-description > h2:nth-child(2){
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1140px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+}
