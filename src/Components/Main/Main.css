@@ -103,20 +103,76 @@ border-right: 8px solid #00ade1;
  -webkit-text-stroke: 1px #00ade1;
 }
 
-.slider-conteiner{
+.slider{
   display: none;
 }
 
+.slider-conteiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: #74b9ff;
+  width: 100%;
+  height: 100vh;
+}
+.slider-text{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.tutorial-button{
+  background-color: #fdcb6e;
+    color: white;
+    border: 1px solid #fdcb6e;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+@keyframes --Appear {
+  0% {opacity: 0;}
+  50% {opacity:0.5;}
+  100% {opacity:1;}
+}
+
+@keyframes --SlideInLeft {
+  from{
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes --SlideInRight {
+  from{
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+
 @media screen and (min-width: 1140px) {
-  .slider-conteiner{
+  .slider{
     display:contents;
   }
+  .more-tutorials{
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 720px) {
   .link{
     font-size: 2.3em;
 }
+
 }
 
 @media screen and (min-width: 1920px) {

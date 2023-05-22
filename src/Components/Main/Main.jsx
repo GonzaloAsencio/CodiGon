@@ -3,43 +3,31 @@ import React from 'react';
 import './Main.css';
 import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
-import { Link } from 'react-router-dom';
-import IconSeparetor from '../SharedComponents/IconSeparetor/IconSeparetor';
-import Carousel from '../SharedComponents/Carousel/Carousel';
-import Card from '../SharedComponents/Card/Cards';
-import iconAmount from '../SharedComponents/IconSeparetor/IconCounter';
-import Slider from '../SharedComponents/Slider/Slider'
+import Slider from '../SharedComponents/Slider/Slider';
+import SocialMedia from '../SharedComponents/SocialMedia/index';
+import Contact from '../SharedComponents/Contact';
+import Descriptions from '../SharedComponents/TutorialDescriptions/index';
+import Scripty from '../../assets/Image/Main/Scripty.png';
+import Unity from '../../assets/Image/Main/Unity.png';
 
 function Main() {
   return (
     <>
     <Header/>
-        <div className='body-conteiner'>
-          <div className='images-carousell'>
-            <Carousel/>
-          </div>
           <div className='slider-conteiner'>
-              <Slider/>
+            <div className='slider-text'>
+                  <h2>QUIERES DESARROLLAR VIDEOJUEGOS?</h2>
+                  <h4>Mejora tu apredizaje viendo los mejores Tutoriales</h4>
             </div>
-          <div className='images-select'>
-            <div className='tutorials'>
-              <h2>TUTORIALES</h2>
+            <div>
+              <button className='tutorial-button'>Ver Tutoriales</button>
             </div>
           </div>
-            <div className='card-conteiner'>
-              <Card search={""}/>
-            </div>
-          <div className='see-more-tutorials'>
-              <ul>
-                <li>
-                  <Link to="/tutorial" className='link' data-text="&nbsp;Ver&nbsp;mas" >
-                    &nbsp;ver mas&nbsp;
-                  </Link>
-                </li>
-              </ul>
+          <div>
+            <Descriptions/>
           </div>
-          <IconSeparetor amount={iconAmount().amount}/>
-        </div>
+          <Contact/>
+          <SocialMedia/>
     <Footer/>
     </>
   );
