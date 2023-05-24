@@ -5,6 +5,7 @@
     justify-content: space-around;
     background-color:rgba(162, 155, 254, 0.6);
     width: 100%;
+    padding-top: 20px;
 }
 .contact-me-image {
     display: flex;
@@ -32,6 +33,7 @@
 .message-title > h2:nth-child(1){
 
     font-size: 1.2rem;
+    
 }
 .message-title > h2:nth-child(2){
 
