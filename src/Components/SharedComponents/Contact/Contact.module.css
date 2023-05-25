@@ -1,0 +1,56 @@
+
+@keyframes --Disapear {
+    0% {opacity: 1;}
+    50% {opacity:0.5;}
+    100% {opacity:0;}
+}
+
+@keyframes --PaperFly {
+    from{
+        transform: translate(-50px, 50px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes --RingRing{
+      0%{
+        transform: rotate(0deg);
+      }
+      25%{
+        transform: rotate(45deg);
+      }
+      50%{
+        transform: rotate(-45deg);
+      }
+      100%{
+        transform: rotate(0deg);
+      }
+}
+
+@keyframes --Appear {
+    0% {opacity: 0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+
+.papperFlyAnimation{
+    animation:--PaperFly , --Appear;
+    animation-duration: 1s,1s;
+    animation-timing-function: linear;
+}
+
+.disappear{
+    animation-name:--Disapear ;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+.appear{
+    animation-name: --Appear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0.3s;
+}

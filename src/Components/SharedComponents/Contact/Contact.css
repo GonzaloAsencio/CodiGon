@@ -15,12 +15,10 @@
 .contact-me-image > img {
     width: 150px;
     height: 150px;
-    animation:--PaperFly , --Appear;
-    animation-duration: 1s;
-    animation-timing-function: linear;
     bottom: 0;
     left: 0;
 }
+
 .message-title{
     color:white;
     display: flex;
@@ -31,9 +29,7 @@
     margin: 0.5rem;
 }
 .message-title > h2:nth-child(1){
-
     font-size: 1.2rem;
-    
 }
 .message-title > h2:nth-child(2){
 
@@ -131,19 +127,6 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.disappear-animation{
-    animation-name:--Disapear ;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-}
-.appear-animation{
-    animation-name: --Appear;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-delay: 0.3s;
-}
 .msgicon{
     position: relative;
     height: 25%;
@@ -162,42 +145,6 @@
     right: 0;
     bottom: 0;
     margin: auto;
-}
-
-@keyframes --Disapear {
-    0% {opacity: 1;}
-    50% {opacity:0.5;}
-    100% {opacity:0;}
-}
-
-@keyframes --PaperFly {
-    from{
-        transform: translate(-50px, 50px);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes --RingRing{
-      0%{
-        transform: rotate(0deg);
-      }
-      25%{
-        transform: rotate(45deg);
-      }
-      50%{
-        transform: rotate(-45deg);
-      }
-      100%{
-        transform: rotate(0deg);
-      }
-}
-
-@keyframes --Appear {
-    0% {opacity: 0;}
-    50% {opacity:0.5;}
-    100% {opacity:1;}
 }
 
 
