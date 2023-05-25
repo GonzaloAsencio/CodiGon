@@ -2,7 +2,6 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
 
-
 let  tutorialRoute ="/tutorial";
 let inicioRoute ='/';
 let inicioStyle;
@@ -23,9 +22,8 @@ function Header() {
 
   window.addEventListener("scroll", function(){
     var header = document.querySelector("header");
-    console.log(this.window.scrollY);
     header.classList.toggle("header-down", this.window.scrollY > 0);
-  })
+})
 
  window.location.pathname === tutorialRoute ? tutorialStyle = pointerStyle : tutorialStyle = nonPointerStyle;
  window.location.pathname === inicioRoute ? inicioStyle = pointerStyle : inicioStyle = nonPointerStyle;

@@ -3,20 +3,25 @@ import React from 'react';
 import './Main.css';
 import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
-import Slider from '../SharedComponents/Slider/Slider';
 import SocialMedia from '../SharedComponents/SocialMedia/index';
 import Contact from '../SharedComponents/Contact';
 import Descriptions from '../SharedComponents/TutorialDescriptions/index';
-import Scripty from '../../assets/Image/Main/Scripty.png';
-import Unity from '../../assets/Image/Main/Unity.png';
 
 function Main() {
+  window.addEventListener('scroll',function(){
+    let animation = document.getElementById('xd');
+    let positionObj = animation.getBoundingClientRect().top;
+    let tamañoDePantalla = window.innerHeight/3;
+    if(positionObj < tamañoDePantalla){
+      animation.style.animation = "--Appear 1s";
+    }
+  })
   return (
     <>
     <Header/>
-          <div className='slider-conteiner'>
+          <div id='xd' className='slider-conteiner'>
             <div className='slider-text'>
-                  <h2>QUIERES DESARROLLAR VIDEOJUEGOS?</h2>
+                  <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
                   <h4>Mejora tu apredizaje viendo los mejores Tutoriales</h4>
             </div>
             <div>

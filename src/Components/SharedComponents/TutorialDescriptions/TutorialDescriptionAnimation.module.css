@@ -1,0 +1,37 @@
+.spawnLeftAnimation {
+    animation-name:  --SlideInLeft, --Appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.spawnRightAnimation{
+    animation-name:  --SlideInRight, --Appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.spawnFrontAnimaiton{
+    animation: --Appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes --Appear {
+    0% {opacity: 0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+@keyframes --SlideInLeft {
+    from{
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes --SlideInRight {
+    from{
+        transform: translateX(100%);
+}
+    to {
+        transform: translateX(0);
+}
+}

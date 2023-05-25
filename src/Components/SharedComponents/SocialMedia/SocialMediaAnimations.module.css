@@ -1,0 +1,45 @@
+@keyframes --Appear {
+    0% {opacity: 0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+
+@keyframes --Hand {
+    from{
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes --InstaAppear{
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity:1;}
+}
+@keyframes --Jump{
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-40px);}
+    100% {transform: translateY(0);}
+}
+
+.socialmediaImage{
+    animation-name: --Appear;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+.iconJump{
+    animation-name:--InstaAppear ,--Jump ;
+    animation-duration: 0.7s, 1.4s;
+}
+.handAnimation{
+    animation-name:--Hand;
+    animation-duration: 0.9s;
+}
+.InstaAppear{
+    animation-name:--InstaAppear;
+    animation-duration: 1s;
+}
+
+
