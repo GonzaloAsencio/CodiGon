@@ -1,51 +1,3 @@
-@keyframes --Appear {
-    0% {opacity: 0;}
-    50% {opacity:0.5;}
-    100% {opacity:1;}
-}
-
-@keyframes --Hand {
-    from{
-        transform: translateX(-100px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes --InstaAppear{
-    0% {opacity: 0;}
-    80% {opacity: 0;}
-    100% {opacity:1;}
-}
-@keyframes --Jump{
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-40px);}
-    100% {transform: translateY(0);}
-}
-
-.information-conteiner{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 100%;
-
-       /*CHECKEAR ESTO*/
-       animation-name: SlideInRight;
-       animation-duration:2s;
-       animation-timing-function:ease-in;
-       animation-delay:0s;
-       animation-iteration-count:1;
-       animation-direction:normal ;
-       animation-fill-mode:none ;
-
-}
-
 .circle-image{
     width: 300px;
     height: 300px;
@@ -87,10 +39,6 @@
     justify-content:center;
     margin: 0.8rem;
     cursor: pointer;
-    animation:
-    --InstaAppear 1.4s linear,
-    --Jump 0.8s 1s;
-
 }
 
 .warpper > .icon:nth-child(1){
@@ -155,9 +103,6 @@
 
 /*SOCIAL MEDIA IMAGE*/
 .social-media-image-conteiner{
-    animation-name: --Appear;
-    animation-duration: 3s;
-    animation-timing-function: linear;
     display: none;
     margin-left: 150px;
 }
@@ -172,14 +117,10 @@
 }
 .sm-second-image {
     position: absolute;
-    animation-name:--Hand;
-    animation-duration: 0.9s;
 }
 
 .sm-third-image{
     position: absolute;
-    animation-name:--InstaAppear;
-    animation-duration: 1s;
 }
 
 .social-media-conteiner{

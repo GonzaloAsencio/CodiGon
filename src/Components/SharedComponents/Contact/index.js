@@ -12,6 +12,7 @@ function Contact() {
     const messageInputs = document.querySelector('.message-inputs');
     const messageIcon = document.querySelector('.msgicon');
     const messageOpenIcon = document.querySelector('.msgiconOpen');
+  
     messageCircle.addEventListener("click", ()=> {
       messageCircle.classList.toggle("disappear-animation");
       messageIcon.style.display='none';
