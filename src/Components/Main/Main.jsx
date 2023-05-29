@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Main.css';
 import Header from '../SharedComponents/Header/Header';
@@ -16,7 +15,7 @@ function Main() {
           <div className='slider-conteiner'>
             <div className='slider-text'>
                   <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
-                  <h4>Mejora tu apredizaje viendo los mejores Tutoriales</h4>
+                  <h4>Mejora tu aprendizaje viendo los mejores tutoriales</h4>
             </div>
             <div>
               <button className='tutorial-button'>Ver Tutoriales</button>

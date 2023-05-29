@@ -10,13 +10,13 @@ import { useInView } from 'react-intersection-observer';
 
 function Contact() {
   const {ref: imageRef, inView: myImageIsVisible} = useInView();
-  
+
   useEffect(()=> {
     const messageCircle = document.querySelector('.messageIcon');
     const messageInputs = document.querySelector('.message-inputs');
     const messageIcon = document.querySelector('.msgicon');
     const messageOpenIcon = document.querySelector('.msgiconOpen');
-  
+    
     messageCircle.addEventListener("click", ()=> {
       messageCircle.classList.toggle(contactAnimation.disappear);
       messageIcon.style.display='none';

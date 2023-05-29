@@ -1,5 +1,5 @@
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000000;
     background-color:#74b9ff;
@@ -34,6 +34,7 @@ padding-left: 10px;
 }
 
 .header-down{
+    position: sticky;
    background-color:#0984E3;
 }
 

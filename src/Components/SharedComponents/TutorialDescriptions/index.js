@@ -18,7 +18,7 @@ function TutorailDescription() {
     const {ref: secondButtonRef, inView: secondButtonVisible} = useInView();
 
     return (
-    <div className='introduction'>
+    <section className='introduction'>
         <div className='introduction-image'>
             <img src={Scripty} alt="" ref={firstRef} className={`${myElementIsVisible ? animation.spawnLeftAnimation :''}`} style={{ 'animationDelay': `1.2s` }} />
             <div className='introduction-description'>
@@ -43,7 +43,7 @@ function TutorailDescription() {
                 <button ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `2.8s` }}>Ir a Unity</button>
             </div>
         </div>
-    </div>
+    </section>
     );
 }
 export default TutorailDescription;
