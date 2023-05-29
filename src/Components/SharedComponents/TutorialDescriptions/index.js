@@ -8,7 +8,6 @@ import { useInView } from 'react-intersection-observer';
 
 
 function TutorailDescription() {
-    
     const {ref: firstRef, inView: myElementIsVisible} = useInView();
     const {ref: firstTitleRef, inView: firstTitleVisible} = useInView();
     const {ref: firstDescriptionRef, inView: firstDescriptionVisible} = useInView();
