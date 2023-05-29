@@ -12,18 +12,18 @@ function Main() {
   return (
     <>
     <Header/>
-          <div className='slider-conteiner'>
+          <section className='slider-conteiner'>
             <div className='slider-text'>
                   <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
-                  <h4>Mejora tu aprendizaje viendo los mejores tutoriales</h4>
+                  <p>Mejora tu aprendizaje viendo los mejores tutoriales</p>
             </div>
             <div>
-              <button className='tutorial-button'>Ver Tutoriales</button>
+              <button className='tutorial-button'>VER TUTORIALES</button>
             </div>
             <a href ="#first-section" className='change-page-button'>
                 <FontAwesomeIcon id='change-page-icon' icon={faChevronDown} className='fa-xl'/>
             </a>
-          </div>
+          </section>
           <div id ="first-section">
             <Descriptions/>
           </div>

@@ -7,7 +7,6 @@ header{
     margin: 0px;
     width: 100%;
 }
-
 .header-nav{
     display: flex;
     justify-content: space-between;
@@ -15,11 +14,9 @@ header{
     margin: 0;
     width: 100%;
 }
-
 .header-logo{
 padding-left: 10px;
 }
-
 .header-buttons{
     display: flex;
     align-items: center;
@@ -28,33 +25,19 @@ padding-left: 10px;
     text-decoration: none;
     display: none;
 }
-
 .header-buttons > ul{
     margin: 0;
 }
-
 .header-down{
     position: sticky;
    background-color:#0984E3;
 }
-
 .header-down > .header-nav > .header-buttons{
     display: flex;
 }
 
 @media screen and (min-width: 720px) {
-    header{
-        font-size: 20px;
-    }
     .header-buttons{
         padding-right: 25px;
     }
-}
-
-@media screen and (min-width: 1366px) {
-    header{
-        font-size: 20px;
-    }
-}
-@media screen and (min-width: 1920px) {
 }

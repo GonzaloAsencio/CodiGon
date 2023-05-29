@@ -1,3 +1,10 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+}
 
 .slider-conteiner{
   display: flex;
@@ -19,15 +26,21 @@
   margin-top: 10vh;
 }
 
+.slider-text> p{
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
 .tutorial-button{
   background-color: #fdcb6e;
     color: white;
     border: 1px solid #fdcb6e;
     margin-top: 10px;
     cursor: pointer;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    border-radius: 2px;
+    padding: 1.5rem 1.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
     font-weight: bold;
 }
 
@@ -102,6 +115,10 @@ animation-iteration-count: infinite;
   }
   .more-tutorials{
     display: none;
+  }
+  .tutorial-button{
+    padding: 1.5rem 2.2rem;
+    font-size: 1.8rem;
   }
 }
 

@@ -15,7 +15,7 @@ function SocialMedia() {
   const {ref: smImageRef, inView: mysmImageIsVisible} = useInView();
 
     return (
-    <div className='social-media'>
+    <section className='social-media'>
         <div className='social-media-conteiner'>
             <div ref={smImageRef} className= {`social-media-image-conteiner ${mysmImageIsVisible ? animations.socialmediaImage :''}`}>
               <img src={handImage} className='sm-base-image' alt=""  />
@@ -25,6 +25,7 @@ function SocialMedia() {
             <div className='social-media-icons'>
               <div className='social-media-text'>
                 <h2>SIGUEME EN MIS REDES</h2>
+                <p>Para enterarte sobre mis últimos árticulos</p>
               </div>
               <div className='warpper'>
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >
@@ -54,7 +55,7 @@ function SocialMedia() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
     );
 }
 export default SocialMedia;

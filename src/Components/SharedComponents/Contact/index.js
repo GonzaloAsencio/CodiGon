@@ -16,7 +16,7 @@ function Contact() {
     const messageInputs = document.querySelector('.message-inputs');
     const messageIcon = document.querySelector('.msgicon');
     const messageOpenIcon = document.querySelector('.msgiconOpen');
-    
+
     messageCircle.addEventListener("click", ()=> {
       messageCircle.classList.toggle(contactAnimation.disappear);
       messageIcon.style.display='none';
@@ -33,7 +33,7 @@ function Contact() {
         <div className='message-container'>
           <div className='message-title'>
             <h2>¿QUERES CONTACTARTE CONMIGO?</h2>
-            <h2>ENVIAME UN MENSAJE</h2>
+            <p>ENVÍAME UN MENSAJE</p>
           </div>
           <div className='message-text'>
               <button className='messageIcon'><FontAwesomeIcon className='msgicon' icon={faEnvelope}/><FontAwesomeIcon className='msgiconOpen' icon={faEnvelopeOpen}/></button>
