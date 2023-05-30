@@ -5,8 +5,6 @@ import Scripty from '../../../assets/Image/Main/Scripty.png';
 import Unity from '../../../assets/Image/Main/Unity.png';
 import { useInView } from 'react-intersection-observer';
 
-
-
 function TutorailDescription() {
     const {ref: firstRef, inView: myElementIsVisible} = useInView();
     const {ref: firstTitleRef, inView: firstTitleVisible} = useInView();
