@@ -25,7 +25,7 @@ function SocialMedia() {
             <div className='social-media-icons'>
               <div className='social-media-text'>
                 <h2>SIGUEME EN MIS REDES</h2>
-                <p>Para enterarte sobre mis últimos árticulos</p>
+                <p>Para enterarte sobre mis últimos árticulos a tiempo.</p>
               </div>
               <div className='warpper'>
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >

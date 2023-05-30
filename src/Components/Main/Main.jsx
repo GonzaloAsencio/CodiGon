@@ -15,7 +15,7 @@ function Main() {
           <section className='slider-conteiner'>
             <div className='slider-text'>
                   <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
-                  <p>Mejora tu aprendizaje viendo los mejores tutoriales</p>
+                  <p>Mejora tu aprendizaje viendo los mejores tutoriales de programación.</p>
             </div>
             <div>
               <button className='tutorial-button'>VER TUTORIALES</button>

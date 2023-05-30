@@ -22,24 +22,24 @@ function TutorailDescription() {
         <div className='introduction-image'>
             <img src={Scripty} alt="" ref={firstRef} className={`${myElementIsVisible ? animation.spawnLeftAnimation :''}`} style={{ 'animationDelay': `1.2s` }} />
             <div className='introduction-description'>
-                <h2 ref={firstTitleRef} className={`${firstTitleVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1s`}} >
+                <h2 ref={firstTitleRef} className={`introduction-description-text ${firstTitleVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1s`}} >
                      Aprende las bases en C#
                 </h2>
-                <h2 ref={firstDescriptionRef} className={`${firstDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1.5s` }}>
-                    Si no sabes las bases de programacion aun, entonces estudia esto.
-                </h2>
+                <p ref={firstDescriptionRef} className={`introduction-description-subText ${firstDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1.5s` }}>
+                    En esta sección aprenderas la lógica basica necesaria para convertirte en un desarrollador profesional.
+                </p>
                 <button ref={firstButtonRef} className={`${firstButtonVisible ?  animation.spawnRightAnimation:''}`}  style={{ 'animationDelay': `2s` }}>Hola C#</button>
             </div>
         </div>
         <div className='introduction-image'>
             <img src={Unity} alt="" ref={secondRef} className={`${mySecondElementIsVisible ? animation.spawnRightAnimation :''}`} style={{ 'animationDelay': `3s` }}/>
             <div className='introduction-description'>
-                <h2 ref={secondTitleRef} className={`${secondTitleVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.2s`}}>
+                <h2 ref={secondTitleRef} className={`introduction-description-text ${secondTitleVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.2s`}}>
                     Para desarrollar Videojuegos en Unity
                 </h2>
-                <h2 ref={secondDescriptionRef} className={`${secondDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.7s` }}>
-                    Si ya sabes las bases de programacion, entonces ya estas listo para desarrollar en Unity.
-                </h2>
+                <p ref={secondDescriptionRef} className={`introduction-description-subText ${secondDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.7s` }}>
+                   Descubre todo lo necesario para convertirte en un desarrollador de Videojuegos.
+                </p>
                 <button ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `2.8s` }}>Ir a Unity</button>
             </div>
         </div>
