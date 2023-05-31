@@ -25,15 +25,9 @@
     flex-direction: column;
     text-align: center;
 }
-.message-title > h2 {
-    margin: 0.5rem;
-}
-.message-title > h2:nth-child(1){
-    font-size: 1.2rem;
-}
-.message-title > h2:nth-child(2){
-
-    font-size: 1rem;
+.message-title > p{
+    margin: 0px;
+    font-style: oblique;
 }
 .message-container{
     display: flex;
@@ -89,7 +83,7 @@
     border: 1px solid #6c5ce7;;
     margin-top: 10px;
     cursor: pointer;
-    padding: 0.6rem 0.8rem;
+    padding: 1rem 1.2rem;
     font-size: 1rem;
     border-radius: 2px;
     font-weight: bold;
@@ -104,7 +98,7 @@
 }
 .from-input{
     width: 100%;
-    height:1.5rem;
+    height:3rem;
     margin: 0;
     padding:0;
     border-radius: 2px;
@@ -148,6 +142,22 @@
 }
 
 
+@keyframes --RingRing{
+    0%{
+      transform: rotate(0deg);
+    }
+    25%{
+      transform: rotate(45deg);
+    }
+    50%{
+      transform: rotate(-45deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+
 @media screen and (min-width: 720px) {
     .message-inputs{
         width: 30%;
@@ -173,6 +183,11 @@
     .from-input{
         height:1.8rem;
     }
+    .from-text-button{
+        padding: 1.5rem 2.2rem;
+        font-size: 1.6rem;
+
+    }
 
 }
 
@@ -180,14 +195,8 @@
     .contact-me{
         justify-content: space-evenly;
     }
-    .message-title > h2:nth-child(1){
-        font-size: 35px;
-    }
-    .message-title > h2:nth-child(2){
-        font-size: 18px;
-    }
     .from-input{
-        height:2rem;
+        height:3rem;
     }
     .contact-me-image > img {
         width: 170px;

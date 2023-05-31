@@ -10,13 +10,13 @@ import { useInView } from 'react-intersection-observer';
 
 function Contact() {
   const {ref: imageRef, inView: myImageIsVisible} = useInView();
-  
+
   useEffect(()=> {
     const messageCircle = document.querySelector('.messageIcon');
     const messageInputs = document.querySelector('.message-inputs');
     const messageIcon = document.querySelector('.msgicon');
     const messageOpenIcon = document.querySelector('.msgiconOpen');
-  
+
     messageCircle.addEventListener("click", ()=> {
       messageCircle.classList.toggle(contactAnimation.disappear);
       messageIcon.style.display='none';
@@ -33,7 +33,7 @@ function Contact() {
         <div className='message-container'>
           <div className='message-title'>
             <h2>¿QUERES CONTACTARTE CONMIGO?</h2>
-            <h2>ENVIAME UN MENSAJE</h2>
+            <p>ENVÍAME UN MENSAJE</p>
           </div>
           <div className='message-text'>
               <button className='messageIcon'><FontAwesomeIcon className='msgicon' icon={faEnvelope}/><FontAwesomeIcon className='msgiconOpen' icon={faEnvelopeOpen}/></button>
@@ -44,7 +44,7 @@ function Contact() {
                 <div className='from-input-container'>
                   <input type="text" placeholder='Email' className='from-input'/>
                 </div>
-                <textarea name="" id="" cols="25" rows="3" className='from-text-area'></textarea>
+                <textarea name="" id="" cols="40" rows="5" className='from-text-area'></textarea>
                 <button className='from-text-button'>Enviar</button>
               </div>
             </div>

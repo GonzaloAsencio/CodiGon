@@ -9,6 +9,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 3rem;
 }
 
 .introduction-image > img{
@@ -30,12 +32,16 @@
   border: 1px solid #fdcb6e;
   margin-top: 10px;
   cursor: pointer;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  border-radius: 2px;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
   font-weight: bold;
   opacity: 0;
   animation-duration: 0.8s;
+}
+
+.introduction-description > button:active{
+  background-color: #ffeaa7;
+  color: #fdcb6e;
 }
 
 .introduction-description{
@@ -44,30 +50,42 @@
   align-items: center;
 }
 
-.introduction-description > h2{
+.introduction-description-text{
   opacity: 0;
 }
-.introduction-description > h2:nth-child(2){
-    display: none;
+.introduction-description-subText{
+  opacity: 0;
+  font-weight: bold;
+  display: none;
 }
 .introduction > .introduction-image:nth-child(2) {
    flex-direction: row-reverse;
 }
-
 .introduction > .introduction-image:nth-child(2) > img{
     opacity: 0;
 }
 
 @media screen and (min-width: 720px) {
-    .introduction-description > h2:nth-child(2){
-        display: flex;
-    }
+  .introduction-description-subText{
+    display: flex;
+  }
 
 }
 
 @media screen and (min-width: 1140px) {
+  .introduction-description-subText{
+    display: flex;
+  }
+  .introduction-description > button {
+    padding: 1.4rem 2rem;
+    font-size: 1.8rem;
+  }
+  .introduction-image > img{
+    width: 25%;
+    height: 25%;
+  }
+  .introduction-image {
+    padding-bottom: 1rem;
+  }
 
-}
-
-@media screen and (min-width: 1920px) {
 }

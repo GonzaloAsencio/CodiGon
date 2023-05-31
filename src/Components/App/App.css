@@ -28,9 +28,6 @@
   color: #61dafb;
 }
 
-html{
-  scroll-behavior: smooth;
-}
 
 @keyframes App-logo-spin {
   from {
