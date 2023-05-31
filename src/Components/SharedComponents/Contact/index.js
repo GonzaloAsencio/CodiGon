@@ -44,7 +44,7 @@ function Contact() {
                 <div className='from-input-container'>
                   <input type="text" placeholder='Email' className='from-input'/>
                 </div>
-                <textarea name="" id="" cols="25" rows="3" className='from-text-area'></textarea>
+                <textarea name="" id="" cols="40" rows="5" className='from-text-area'></textarea>
                 <button className='from-text-button'>Enviar</button>
               </div>
             </div>

@@ -76,6 +76,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
+.tutorial-button:active{
+  background-color: #ffeaa7;
+  color: #fdcb6e;
+}
+
 #change-page-icon  {
 animation-name: --UpDown;
 animation-duration: 1s;
