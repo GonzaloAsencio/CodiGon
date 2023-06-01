@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import image from '../../assets/Image/Holder/614e5365a3d18.jpg';
 import paperFlyImage from '../../assets/Image/ContactMe/paperfly1.png';
 import paperFlyImage2 from '../../assets/Image/ContactMe/paperfly2.png';
@@ -37,4 +37,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Contact;*/
