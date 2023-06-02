@@ -45,6 +45,13 @@
 .message-container > h2{
   color: white;
 }
+.succesMessage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 297px;
+}
 .message-text{
     position: relative;
     display: flex;
@@ -147,8 +154,8 @@
     border-radius: 2rem;
     position: absolute;
 }
-.test{ 
-    position: absolute;
+.msgIconBackground{ 
+    position: relative;
     background-color: white;
     width: 8rem;
     height: 8rem;
