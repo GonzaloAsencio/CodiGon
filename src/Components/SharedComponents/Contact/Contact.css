@@ -114,6 +114,7 @@
     outline: solid 1.2px #6c5ce7 ;
 }
 .from-input::placeholder {
+    word-spacing: 9px !important;
     color:#b2bec3 ;
 }
 .from-input:focus{
@@ -212,7 +213,6 @@
     .message-inputs{
         width: 30%;
         height: 30%;
-
     }
 }
 
@@ -236,7 +236,9 @@
     .from-text-button{
         padding: 1.5rem 2.2rem;
         font-size: 1.6rem;
-
+    }
+    .from-input{
+        height:4rem;
     }
 
 }
@@ -246,7 +248,7 @@
         justify-content: space-evenly;
     }
     .from-input{
-        height:3rem;
+        height:4rem;
     }
     .contact-me-image > img {
         width: 170px;
