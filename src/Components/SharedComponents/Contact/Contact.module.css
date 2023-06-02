@@ -34,8 +34,6 @@
 }
 .appear{
     animation-name: --Appear;
-    animation-fill-mode: forwards;
     animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
