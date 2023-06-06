@@ -5,6 +5,7 @@ import Main from '../Main/Main';
 import Contact from '../Contact/Contact';
 import Login from '../LoginPage/index';
 import Register from '../ReginsterPage/index';
+import CreatePost from '../CreatePostPage/index';
 import { UserContextProvider } from '../UserContext';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/contact' exact Component={Contact}/>
         <Route path='/register' exact Component={Register}/>
         <Route path='/login' exact Component={Login}/>
+        <Route path='/create' exact Component={CreatePost}/>
       </Routes>
     </Router>
   </UserContextProvider>
