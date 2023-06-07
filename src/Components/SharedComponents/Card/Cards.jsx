@@ -19,9 +19,7 @@ function Cards({search}){
     function CalculateColor(){
         var initialColor =0;
         var ColorPallete=["#55efc4","#81ecec","#74b9ff","#fab1a0","#ff7675","#fd79a8"];
-        console.log(posts);
          posts.forEach(element => {
-            console.log("estoy ACA" + ColorPallete[initialColor]);
                 element.color = ColorPallete[initialColor];
                 initialColor++;
                 if(initialColor >= ColorPallete.length){
@@ -34,7 +32,6 @@ return(
     <div className="cards">
         {posts.length > 0 && posts.map(post => (
             <div className="cards-conteiner" key={post._id}>
-                {console.log(post.color)}
                 <Card {...post}/>
             </div>
         ))}

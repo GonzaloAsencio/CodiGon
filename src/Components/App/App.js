@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Tutorial from '../TutorialPage/Tutorial';
 import Main from '../Main/Main';
 import Contact from '../Contact/Contact';
 import Login from '../LoginPage/index';
 import Register from '../ReginsterPage/index';
 import CreatePost from '../CreatePostPage/index';
+import PostPage from '../PostPage/index';
 import { UserContextProvider } from '../UserContext';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
         <Route path='/register' exact Component={Register}/>
         <Route path='/login' exact Component={Login}/>
         <Route path='/create' exact Component={CreatePost}/>
+        <Route path='/tutorial/post/:id' element={<PostPage />} />
       </Routes>
     </Router>
   </UserContextProvider>

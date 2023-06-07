@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import './Card.css';
+import {Link} from 'react-router-dom';
 
-function Card({title, summary,cover,color}) {
+function Card({_id,title, summary,cover,color}) {
     const cardStyle = {
         background: color
       };
@@ -10,7 +11,9 @@ return (
     <div className='card' style = {cardStyle} >
         <div className='card-body'>
             <div className='card-image'>
+                <Link to={`post/${_id}`}>
                 <img src={'http://localhost:4000/'+cover} alt=''/>
+                </Link>
             </div>
             <div className='card-text-conteiner' style = {cardStyle}>
                 <h2 className='card-tittle'>{title}</h2>
