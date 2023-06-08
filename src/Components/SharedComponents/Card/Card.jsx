@@ -1,25 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import './Card.css';
+import {Link} from 'react-router-dom';
 
-function Card({title, description, image,url,icon,color}) {
+function Card({_id,title, summary,cover,color}) {
     const cardStyle = {
-        background: color,
+        background: color
       };
 return (
     <div className='card' style = {cardStyle} >
         <div className='card-body'>
-            <a href={url}/>
             <div className='card-image'>
-                <img src={image} alt=''/>
-            </div>
-            <div className='card-icon-image'>
-                <img src={icon} alt=''/>
+                <Link to={`post/${_id}`}>
+                <img src={'http://localhost:4000/'+cover} alt=''/>
+                </Link>
             </div>
             <div className='card-text-conteiner' style = {cardStyle}>
                 <h2 className='card-tittle'>{title}</h2>
                 <p className='card-text text-secondary'>
-                { description ? description :
+                { summary ? summary :
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit '
                 }
                 </p>

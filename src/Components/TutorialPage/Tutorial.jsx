@@ -3,7 +3,6 @@ import './Tutorial.css';
 import Card from '../SharedComponents/Card/Cards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer';
 
 
@@ -22,7 +21,6 @@ function Tutorial() {
 
   return (
     <>
-    <Header/>
       <div className='tutorial-conteiner'>
          <div className='buttons'>
             <button  class='btn' onClick={()=> setSeach('unity')}>UNITY</button>
