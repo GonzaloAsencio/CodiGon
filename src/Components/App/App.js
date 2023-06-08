@@ -8,6 +8,7 @@ import Login from '../LoginPage/index';
 import Register from '../ReginsterPage/index';
 import CreatePost from '../CreatePostPage/index';
 import PostPage from '../PostPage/index';
+import EditPost from '../EditorPage/index';
 import { UserContextProvider } from '../UserContext';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' exact Component={Login}/>
         <Route path='/create' exact Component={CreatePost}/>
         <Route path='/tutorial/post/:id' element={<PostPage />} />
+        <Route path="/edit/:id" element={<EditPost />} />
       </Routes>
     </Router>
   </UserContextProvider>
