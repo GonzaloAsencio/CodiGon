@@ -1,8 +1,10 @@
 import {useContext, useEffect, useState} from "react";
 import {useParams,Link} from "react-router-dom";
-import {UserContext} from "../UserContext";
+import {UserContext} from "../../UserContext";
 
-export default function PostPage() {
+
+
+export default function  PostPage()  {
   const [postInfo,setPostInfo] = useState(null);
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();

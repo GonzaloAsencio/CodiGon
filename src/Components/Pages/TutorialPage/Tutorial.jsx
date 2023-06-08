@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Tutorial.css';
-import Card from '../SharedComponents/Card/Cards';
+import Card from '../../SharedComponents/Card/Cards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../SharedComponents/Footer';
+import Footer from '../../SharedComponents/Footer';
 
 
 function Tutorial() {

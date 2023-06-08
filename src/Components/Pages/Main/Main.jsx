@@ -1,10 +1,11 @@
 import React from 'react';
 import './Main.css';
-import Header from '../SharedComponents/Header/Header';
-import Footer from '../SharedComponents/Footer/index';
-import SocialMedia from '../SharedComponents/SocialMedia/index';
-import Contact from '../SharedComponents/Contact';
-import Descriptions from '../SharedComponents/TutorialDescriptions/index';
+import Header from '../../SharedComponents/Header/Header';
+import Footer from '../../SharedComponents/Footer/index';
+import SocialMedia from '../../SharedComponents/SocialMedia/index';
+import Contact from '../../SharedComponents/Contact';
+import Descriptions from '../../SharedComponents/TutorialDescriptions/index';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 
