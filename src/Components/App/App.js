@@ -2,7 +2,6 @@ import React,{lazy,Suspense} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserContextProvider } from '../UserContext';
 
-
 const RegisterLayout = lazy(() => import('../Pages/ReginsterPage/index'));
 const LoginLayout = lazy(() => import('../Pages/LoginPage/index'));
 const MainLayout = lazy(() => import('../Pages/Main/Main'));

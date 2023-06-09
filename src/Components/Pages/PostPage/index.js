@@ -3,7 +3,6 @@ import {useParams,Link} from "react-router-dom";
 import {UserContext} from "../../UserContext";
 
 
-
 export default function  PostPage()  {
   const [postInfo,setPostInfo] = useState(null);
   const {userInfo} = useContext(UserContext);
