@@ -1,14 +1,18 @@
 import {useEffect,useContext,useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation  } from 'react-router-dom';
 import './NavBar.css';
-import styled from 'styled-components';
 import BurguerButton from './burgerButton';
 import {UserContext} from "../../UserContext";
 
 function Navbar() {
+  let location = useLocation();
+  console.log(location.pathname);
+  if(location.pathname === "/"){
+    console.log("xd");
+  }
 
     const [clicked, setClicked] = useState(false)
-    const handleClick = () => {
+    const handleClick = (state) => {
     setClicked(!clicked)
   }
 
@@ -51,13 +55,12 @@ const {setUserInfo,userInfo} = useContext(UserContext);
             </>
           )}
           {!username && (
-            <>
-                <a className='nav-links'  onClick={handleClick} href="#first-section">Home</a>
-                <a className='nav-links'  onClick={handleClick} href="#h">Shop</a>
-                <a className='nav-links'  onClick={handleClick} href="#h">About</a>
-                <a className='nav-links'  onClick={handleClick} href="#h">Contact</a>
-                <a className='nav-links'  onClick={handleClick} href="#h">Blog</a>
-            </>
+            <div className='nav-container' onClick={() => setClicked(false)}>
+                <a className='nav-links'   href="#first-section">Inicio</a>
+                <a className='nav-links'   href="#first-section">Tutoriales</a>
+                <a className='nav-links'   href="#second-section">Contacto</a>
+                <a className='nav-links'   href="#third-section">Mis Redes</a>
+            </div>
           )}
         </div>
         <div className='burguer'>
