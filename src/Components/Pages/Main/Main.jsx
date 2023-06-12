@@ -5,7 +5,6 @@ import Footer from '../../SharedComponents/Footer/index';
 import SocialMedia from '../../SharedComponents/SocialMedia/index';
 import Contact from '../../SharedComponents/Contact';
 import Descriptions from '../../SharedComponents/TutorialDescriptions/index';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 
@@ -28,8 +27,12 @@ function Main() {
           <div id ="first-section">
             <Descriptions/>
           </div>
-          <Contact/>
-          <SocialMedia/>
+          <div id="second-section">
+            <Contact/>
+          </div>
+          <div id="third-section">
+            <SocialMedia/>
+          </div>
     <Footer/>
     </>
   );
