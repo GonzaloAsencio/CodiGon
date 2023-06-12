@@ -27,8 +27,12 @@ function Main() {
           <div id ="first-section">
             <Descriptions/>
           </div>
-          <Contact/>
-          <SocialMedia/>
+          <div id="second-section">
+            <Contact/>
+          </div>
+          <div id="third-section">
+            <SocialMedia/>
+          </div>
     <Footer/>
     </>
   );

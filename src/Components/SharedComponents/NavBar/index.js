@@ -1,24 +1,35 @@
-import {useEffect,useContext,useState} from 'react';
-import { Link,useLocation  } from 'react-router-dom';
+import {useEffect,useContext,useState,useRef} from 'react';
+import { Link} from 'react-router-dom';
 import './NavBar.css';
 import BurguerButton from './burgerButton';
 import {UserContext} from "../../UserContext";
 
 function Navbar() {
-  let location = useLocation();
-  console.log(location.pathname);
-  if(location.pathname === "/"){
-    console.log("xd");
-  }
-
     const [clicked, setClicked] = useState(false)
     const handleClick = (state) => {
     setClicked(!clicked)
   }
 
+  const pointerStyle = {
+    fontWeight: 'bold',
+    color:'pink',
+  };
+
+
 const {setUserInfo,userInfo} = useContext(UserContext);
 
   useEffect(() => {
+    const list = document.querySelectorAll('.nav-links');
+  console.log(list);
+  function activeLink(){
+
+    list.forEach((item) =>
+      item.classList.remove('nav-links-active'));
+      this.classList.add('nav-links-active');
+  }
+  list.forEach((item) =>
+  item.addEventListener('click',activeLink));
+
     if(username){
       fetch('http://localhost:4000/profile', {
         credentials: 'include',
@@ -56,10 +67,10 @@ const {setUserInfo,userInfo} = useContext(UserContext);
           )}
           {!username && (
             <div className='nav-container' onClick={() => setClicked(false)}>
-                <a className='nav-links'   href="#first-section">Inicio</a>
-                <a className='nav-links'   href="#first-section">Tutoriales</a>
-                <a className='nav-links'   href="#second-section">Contacto</a>
-                <a className='nav-links'   href="#third-section">Mis Redes</a>
+                <a className='nav-links nav-links-active' href="#first-section">Inicio</a>
+                <a className='nav-links'  href="#first-section">Tutoriales</a>
+                <a className='nav-links'  href="#second-section">Contacto</a>
+                <a className='nav-links'  href="#third-section">Mis Redes</a>
             </div>
           )}
         </div>
