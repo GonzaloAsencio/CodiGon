@@ -27,10 +27,12 @@ function Cards({search}){
                 }
         });
     }
-
+//ME FALTA CONFIGURAR PARA CUANDO HAGAN CLICK EN UNITY O CSH
 return(
     <div className="cards">
-        {posts.length > 0 && posts.map(post => (
+        {posts.filter((item) =>{
+            return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
+        }).map(post => (
             <div className="cards-conteiner" key={post._id}>
                 <Card {...post}/>
             </div>

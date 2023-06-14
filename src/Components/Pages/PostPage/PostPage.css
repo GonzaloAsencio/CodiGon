@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&family=Secular+One&display=swap');
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+h2{
+  font-family: 'Secular One', sans-serif;
+}
+p{
+  font-family: 'Questrial', sans-serif;
+}
+a{
+  font-family: 'Questrial', sans-serif;
+}
+button{
+  font-family: 'Archivo Black', sans-serif;
+}
+body {
+  font-size: 2.6rem;
+}
+.post-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 120px;
+}
+.post-summary{
+  color: #636e72;
+}
+.post-image{
+  padding: 20px 0;
+}
+.author{
+  color: #b2bec3;
+}

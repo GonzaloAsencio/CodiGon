@@ -9,20 +9,12 @@ function Navbar() {
     const handleClick = (state) => {
     setClicked(!clicked)
   }
-
-  const pointerStyle = {
-    fontWeight: 'bold',
-    color:'pink',
-  };
-
-
 const {setUserInfo,userInfo} = useContext(UserContext);
 
   useEffect(() => {
     const list = document.querySelectorAll('.nav-links');
-  console.log(list);
-  function activeLink(){
 
+    function activeLink(){
     list.forEach((item) =>
       item.classList.remove('nav-links-active'));
       this.classList.add('nav-links-active');

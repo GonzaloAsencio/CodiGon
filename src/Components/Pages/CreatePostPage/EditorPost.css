@@ -1,0 +1,24 @@
+.post-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top:10%;
+}
+
+.post-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.post-inputs > input{
+  margin: 1rem;
+}
+.post-selectors{
+    display: flex;
+    flex-direction: row;
+}

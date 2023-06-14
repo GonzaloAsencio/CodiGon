@@ -6,7 +6,6 @@ const PostSchema = new Schema({
   summary:String,
   content:String,
   cover:String,
-  language:String,
   color:String,
   icon:String,
   author:{type:Schema.Types.ObjectId, ref:'User'},
