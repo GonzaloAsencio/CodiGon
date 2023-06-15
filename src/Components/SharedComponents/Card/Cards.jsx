@@ -3,7 +3,7 @@ import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
 
-function Cards({search}){
+function Cards({search,language}){
 
     const [posts,setPosts] = useState([]);
     useEffect(() => {
@@ -15,6 +15,8 @@ function Cards({search}){
     }, []);
 
     CalculateColor();
+
+   console.log(language);
 
     function CalculateColor(){
         var initialColor =0;
@@ -31,7 +33,7 @@ function Cards({search}){
 return(
     <div className="cards">
         {posts.filter((item) =>{
-            return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
+            return  language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
         }).map(post => (
             <div className="cards-conteiner" key={post._id}>
                 <Card {...post}/>
