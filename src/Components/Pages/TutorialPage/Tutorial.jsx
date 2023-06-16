@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useRef } from 'react';
+import React, { useState} from 'react';
 import './Tutorial.css';
 import Card from '../../SharedComponents/Card/Cards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,7 @@ function Tutorial() {
   const buttonList = document.querySelectorAll('.btn');
     
   const handleClick = (event, message) => {
-    if (!event.currentTarget.classList.contains('selected-button')) { 
+    if (!event.currentTarget.classList.contains('selected-button')) {
           buttonList.forEach((item) =>
           item.classList.remove('selected-button'));
           event.currentTarget.classList.add('selected-button');

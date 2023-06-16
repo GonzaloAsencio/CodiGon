@@ -1,0 +1,25 @@
+.primary{
+    background-color: #fdcb6e;
+    color: white;
+    border: 1px solid #fdcb6e;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation-duration: 0.8s;
+  }
+  .primary:active{
+    background-color: #ffeaa7;
+    color: #fdcb6e;
+  }
+
+
+  @media screen and (min-width: 1140px) {
+
+    .standard-button {
+      padding: 1.5rem 2.2rem;
+      font-size: 1.8rem;
+    }
+  }
