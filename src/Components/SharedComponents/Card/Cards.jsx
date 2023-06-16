@@ -3,7 +3,7 @@ import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
 
-function Cards({search}){
+function Cards({search,language}){
 
     const [posts,setPosts] = useState([]);
     useEffect(() => {
@@ -16,6 +16,8 @@ function Cards({search}){
 
     CalculateColor();
 
+   console.log(language);
+
     function CalculateColor(){
         var initialColor =0;
         var ColorPallete=["#55efc4","#81ecec","#74b9ff","#fab1a0","#ff7675","#fd79a8"];
@@ -27,10 +29,12 @@ function Cards({search}){
                 }
         });
     }
-
+//ME FALTA CONFIGURAR PARA CUANDO HAGAN CLICK EN UNITY O CSH
 return(
     <div className="cards">
-        {posts.length > 0 && posts.map(post => (
+        {posts.filter((item) =>{
+            return  language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
+        }).map(post => (
             <div className="cards-conteiner" key={post._id}>
                 <Card {...post}/>
             </div>

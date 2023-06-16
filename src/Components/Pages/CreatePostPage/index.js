@@ -1,10 +1,8 @@
 import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
+import './EditorPost.css';
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
-var actualColor;
-var initialColor=0;
-
 
 
 export default function CreatePost() {
@@ -12,22 +10,22 @@ export default function CreatePost() {
   const [summary,setSummary] = useState('');
   const [content,setContent] = useState('');
   const [files, setFiles] = useState('');
-  const [language, setLanguage] = useState('');
-  const [icon, setIcon] = useState('');
+  const [icon, setIcon] = useState('Unity');
   const [redirect, setRedirect] = useState(false);
 
-
-
+  const handleChangeLanguague = (event) => {
+    setIcon(event.target.value);
+  };
   async function createNewPost(ev) {
     const data = new FormData();
     data.set('title', title);
     data.set('summary', summary);
     data.set('content', content);
     data.set('file', files[0]);
-    data.set('languague',language);
     data.set('color','');
     data.set('icon',icon);
     ev.preventDefault();
+    
     const response = await fetch('http://localhost:4000/post', {
       method: 'POST',
       body: data,
@@ -41,14 +39,24 @@ export default function CreatePost() {
   if (redirect) {
     return <Navigate to={'/'} />
   }
-  const modules = {
-    toolbar: [
-      [{ 'header': [1, 2, false] }],
-      ['bold', 'italic', 'underline','strike', 'blockquote'],
-      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-      ['link', 'image'],
-      ['clean']
-    ],
+
+  var toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],        
+    ['blockquote', 'code-block'],
+    [{ 'header': 1 }, { 'header': 2 }],              
+    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    [{ 'script': 'sub'}, { 'script': 'super' }],
+    [{ 'indent': '-1'}, { 'indent': '+1' }],        
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+    [{ 'color': [] }, { 'background': [] }],        
+    [{ 'font': [] }],
+	  ['link', 'image','video'],
+    [{ 'align': [] }],
+    ['clean']                                      
+  ];
+
+  const module = {
+    toolbar:toolbarOptions,
   };
 
   const formats = [
@@ -58,8 +66,10 @@ export default function CreatePost() {
     'link', 'image'
   ];
 
+
   return (
-    <form onSubmit={createNewPost}>
+    <form className="post-form" onSubmit={createNewPost}>
+      <div className="post-inputs">
       <input type="title"
              placeholder={'Title'}
              value={title}
@@ -68,9 +78,16 @@ export default function CreatePost() {
              placeholder={'Summary'}
              value={summary}
              onChange={ev => setSummary(ev.target.value)} />
+      <div className="post-selectors">
       <input type="file"
              onChange={ev => setFiles(ev.target.files)} />
-             <ReactQuill value={content} onChange={newValue => setContent(newValue)} module={modules} formats={formats} />
+      <select value={icon} onChange={handleChangeLanguague}>
+          <option value="Unity">Unity</option>
+          <option value="Csharp">C#</option>
+      </select>
+      </div>
+    </div>
+      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats}/>
       <button style={{marginTop:'5px'}}>Create post</button>
     </form>
   );

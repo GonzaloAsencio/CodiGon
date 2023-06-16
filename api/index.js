@@ -73,12 +73,11 @@ app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
   const {token} = req.cookies;
   jwt.verify(token, secret, {}, async (err,info) => {
     if (err) throw err;
-    const {title,summary,content,language,color,icon} = req.body;
+    const {title,summary,content,color,icon} = req.body;
     const postDoc = await Post.create({
       title,
       summary,
       content,
-      language,
       color,
       icon,
       cover:newPath,
