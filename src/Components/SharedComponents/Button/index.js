@@ -1,60 +1,65 @@
 import React from 'react';
-import { css } from '@emotion/react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const variantStyles = {
   primary: {
     background: '#fdcb6e',
-    backgroundDisabled: '#9B9B9B',
-    backgroundHover: '#ffeaa7;',
+    borderColor: '#fdcb6e',
+    backgroundDisabled: '#ffffff',
+    colorDisabled: '#fdcb6e',
+    backgroundHover: '#ffeaa7',
+    backgroundColorHover: '#fdcb6e',
     color: '#ffffff',
-    colorDisabled: '#ffeaa7;',
   },
   secondary: {
-    background: '#5FC23A',
+    background: '#ffffff',
+    borderColor: '#6c5ce7',
     backgroundDisabled: '#9B9B9B',
-    backgroundHover: '#418628',
-    color: '#ffffff',
+    backgroundHover: '#a29bfe',
+    color: '#6c5ce7',
+    backgroundColorHover:'#ffffff',
     colorDisabled: '#ffffff',
-    focus: '#5FC23A',
   },
 };
 
-const Button = ({ text, variant, isDisabled, onClick }) => {
-  
-  const variantStyle = variantStyles[variant];
+const ButtonStyle = styled.button`
+  background-color: ${(props) => variantStyles[props.variant].background};
+  border-radius: 0.5rem;
+  border: 2px solid ${(props) => variantStyles[props.variant].borderColor};
+  cursor: ${(props) => props.disabled ? 'default' : 'pointer'};
+  color: ${(props) => variantStyles[props.variant].color};
+  padding: ${(props) => props.size === 'big' ? '1.5rem 2.2rem' : props.size === 'medium' ?  '1.5rem 1.5rem' : '1rem 1.2rem'};
+  font-size: ${(props) => props.textSizee === 'big' ? '2.3rem' : props.textSize === 'medium' ?  '1.8rem' : '1.6rem'};
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.25s ease-out;
+  &:active {
+    background-color: ${(props) => variantStyles[props.variant].backgroundHover};
+    color: ${(props) => variantStyles[props.variant].backgroundColorHover};
+  }
+  &:hover {
+    background-color: ${(props) => variantStyles[props.variant].backgroundHover};
+    color: ${(props) => variantStyles[props.variant].backgroundColorHover};
+  }
+  &:disabled {
+    background-color: ${(props) => variantStyles[props.variant].backgroundDisabled};
+    color: ${(props) => variantStyles[props.variant].colorDisabled};
+  }
+`;
 
-  const ButtonStyle =css`
-    background-color: ${variantStyle.background};
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: ${isDisabled ? 'default' : null};
-    color: #ffffff;
-    padding: 1rem 1.2rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.25s ease-out;
-    &:hover {
-      background-color: ${variantStyle.backgroundHover};
-    }
-    &:focus {
-      box-shadow: 0 0 10px 2px ${variantStyle.focus}90;
-      outline: dashed 2px ${variantStyle.focus}30;
-    }
-    &:disabled {
-      background-color: ${variantStyle.backgroundDisabled};
-      color: ${variantStyle.colorDisabled};
-    }
-  `;
-
+const Button = ({ text, variant, disabled, onClick ,size,textSize}) => {
   return (
-    <button
+    <ButtonStyle
       type="button"
-      css={ButtonStyle}
       onClick={onClick}
-      disabled={isDisabled}
+      disabled={disabled}
+      size ={size}
+      textSize={textSize}
+      variant={variant}
     >
       {text}
-    </button>
+    </ButtonStyle>
   );
 };
 
