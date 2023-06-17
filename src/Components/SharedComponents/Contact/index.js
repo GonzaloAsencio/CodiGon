@@ -93,7 +93,7 @@ const handleSubmit = (e) => {
                     <textarea name="message" id="" cols="40" rows="5" className='from-text-area ' value={formValues.message} onChange={handleChange}></textarea>
                     {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.message}</p>}
                   </div>
-                  <Button onClick={()=> handleSubmit} text='Enviar' variant='secondary' size='big' />
+                    <Button  text='Enviar' variant='secondary' size='big' />
                   </form>
                 </>
             }
