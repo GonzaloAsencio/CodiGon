@@ -46,18 +46,6 @@ body {
   font-weight: bold;
 }
 
-.tutorial-button{
-  background-color: #fdcb6e;
-    color: white;
-    border: 1px solid #fdcb6e;
-    margin-top: 10px;
-    cursor: pointer;
-    padding: 1.5rem 1.5rem;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    font-weight: bold;
-}
-
 .change-page-button{
   display: flex;
   flex-direction: column;
@@ -80,10 +68,6 @@ body {
   cursor: pointer;
 }
 
-.tutorial-button:active{
-  background-color: #ffeaa7;
-  color: #fdcb6e;
-}
 
 #change-page-icon  {
 animation-name: --UpDown;
@@ -135,10 +119,6 @@ animation-iteration-count: infinite;
   }
   .more-tutorials{
     display: none;
-  }
-  .tutorial-button{
-    padding: 1.5rem 2.2rem;
-    font-size: 1.8rem;
   }
 }
 

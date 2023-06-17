@@ -85,21 +85,6 @@
 .from-text-area:focus{
     outline: solid 2px #6c5ce7 ;
 }
-.from-text-button{
-    background-color: white;
-    color: #6c5ce7;
-    border: 1px solid #6c5ce7;;
-    margin-top: 10px;
-    cursor: pointer;
-    padding: 1rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 2px;
-    font-weight: bold;
-}
-.from-text-button:active{
-    background-color: #6c5ce7;
-    color: white;
-}
 .from-input-container{
     width: 100%;
     padding-bottom: 10px;
@@ -232,10 +217,6 @@
     }
     .from-input{
         height:1.8rem;
-    }
-    .from-text-button{
-        padding: 1.5rem 2.2rem;
-        font-size: 1.6rem;
     }
     .from-input{
         height:4rem;

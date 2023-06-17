@@ -7,6 +7,7 @@ import paperFlyImage2 from '../../../assets/Image/ContactMe/paperfly2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEnvelope,faEnvelopeOpen, faCheck} from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
+import Button from '../../SharedComponents/Button/index';
 import inputsValidatios from './inputsValidatios';
 
 function Contact() {
@@ -92,7 +93,7 @@ const handleSubmit = (e) => {
                     <textarea name="message" id="" cols="40" rows="5" className='from-text-area ' value={formValues.message} onChange={handleChange}></textarea>
                     {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.message}</p>}
                   </div>
-                  <button className='from-text-button'>Enviar</button>
+                  <Button onClick={()=> handleSubmit} text='Enviar' variant='secondary' size='big' />
                   </form>
                 </>
             }

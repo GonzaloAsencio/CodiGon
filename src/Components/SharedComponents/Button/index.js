@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -23,10 +24,11 @@ const variantStyles = {
   },
 };
 
+
 const ButtonStyle = styled.button`
   background-color: ${(props) => variantStyles[props.variant].background};
   border-radius: 0.5rem;
-  border: 2px solid ${(props) => variantStyles[props.variant].borderColor};
+  border: 1px solid ${(props) => variantStyles[props.variant].borderColor};
   cursor: ${(props) => props.disabled ? 'default' : 'pointer'};
   color: ${(props) => variantStyles[props.variant].color};
   padding: ${(props) => props.size === 'big' ? '1.5rem 2.2rem' : props.size === 'medium' ?  '1.5rem 1.5rem' : '1rem 1.2rem'};
@@ -48,18 +50,31 @@ const ButtonStyle = styled.button`
   }
 `;
 
-const Button = ({ text, variant, disabled, onClick ,size,textSize}) => {
+const Button = ({ text, variant,onClick, disabled,size,textSize,path}) => {
+
+  const navigate = useNavigate()
+  const onAction = () => {
+    if (path !== undefined) {
+      console.log(path);
+      navigate(path)
+    } else {
+      onClick();
+    }
+  };
+
   return (
+  <div>
     <ButtonStyle
-      type="button"
-      onClick={onClick}
+      onClick={onAction}
       disabled={disabled}
       size ={size}
       textSize={textSize}
       variant={variant}
+      path
     >
       {text}
     </ButtonStyle>
+  </div>
   );
 };
 
