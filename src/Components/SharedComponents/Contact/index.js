@@ -9,6 +9,8 @@ import {faEnvelope,faEnvelopeOpen, faCheck} from '@fortawesome/free-solid-svg-ic
 import { useInView } from 'react-intersection-observer';
 import Button from '../../SharedComponents/Button/index';
 import inputsValidatios from './inputsValidatios';
+import InputField from '../../SharedComponents/Input/index';
+
 
 function Contact() {
   const {ref: imageRef, inView: myImageIsVisible} = useInView();
@@ -82,12 +84,10 @@ const handleSubmit = (e) => {
                   </button>
                   <form className='message-inputs' onSubmit={handleSubmit}>
                   <div className='from-input-container'>
-                    <input type="text" placeholder='Nombre' className='from-input' name='fullname' value={formValues.fullname} onChange={handleChange} />
-                    {<p style={{ color: "#ff7675",margin:'2px'}}>{formErrors.fullname}</p>}
+                    <InputField placeholder='Nombre' name='fullname' value={formValues.fullname} onChange={handleChange} error = {formErrors.fullname} />
                   </div>
                   <div className='from-input-container'>
-                    <input type="text" placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} />
-                    {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.email}</p>}
+                    <InputField placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error = {formErrors.email} />
                   </div>
                   <div className='from-input-container'>
                     <textarea name="message" id="" cols="40" rows="5" className='from-text-area ' value={formValues.message} onChange={handleChange}></textarea>
