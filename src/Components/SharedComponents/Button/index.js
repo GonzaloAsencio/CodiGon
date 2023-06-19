@@ -50,13 +50,14 @@ const ButtonStyle = styled.button`
   }
 `;
 
+//EL ONACTIO Y NAVIGATE NO FUNCIONA
 const Button = ({ text, variant,onClick, disabled,size,textSize,path}) => {
 
   const navigate = useNavigate()
   const onAction = () => {
     if (path !== undefined) {
       console.log(path);
-      navigate(path)
+      navigate(path);
     } else {
       onClick();
     }

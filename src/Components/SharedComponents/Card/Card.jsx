@@ -11,15 +11,13 @@ return (
     <div className='card' style = {cardStyle} >
         <div className='card-body'>
             <div className='card-image'>
-                <Link to={`post/${_id}`}>
                 <img src={'http://localhost:4000/'+cover} alt=''/>
-                </Link>
             </div>
             <div className='card-text-conteiner' style = {cardStyle}>
                 <h2 className='card-tittle'>{title}</h2>
                 <p className='card-text text-secondary'>
                 { summary ? summary :
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit '
+                'El creador de esta página se olvidó de agregar contenido en esta sección. '
                 }
                 </p>
             </div>

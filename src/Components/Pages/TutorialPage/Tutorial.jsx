@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import './Tutorial.css';
 import Card from '../../SharedComponents/Card/Cards';
+import  '../../SharedComponents/Card/Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../SharedComponents/Footer';
@@ -10,7 +11,7 @@ function Tutorial() {
   const [searchText,setSeach] = useState('');
   const [languageText,setLanguage] = useState('');
   const buttonList = document.querySelectorAll('.btn');
-    
+  
   const handleClick = (event, message) => {
     if (!event.currentTarget.classList.contains('selected-button')) {
           buttonList.forEach((item) =>

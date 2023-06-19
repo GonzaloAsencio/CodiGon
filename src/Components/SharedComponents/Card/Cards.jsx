@@ -16,7 +16,6 @@ function Cards({search,language}){
 
     CalculateColor();
 
-   console.log(language);
 
     function CalculateColor(){
         var initialColor =0;
@@ -29,7 +28,7 @@ function Cards({search,language}){
                 }
         });
     }
-//ME FALTA CONFIGURAR PARA CUANDO HAGAN CLICK EN UNITY O CSH
+
 return(
     <div className="cards">
         {posts.filter((item) =>{
