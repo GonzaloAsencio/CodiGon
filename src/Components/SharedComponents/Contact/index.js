@@ -10,6 +10,7 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../../SharedComponents/Button/index';
 import inputsValidatios from './inputsValidatios';
 import InputField from '../../SharedComponents/Input/index';
+import TextArea from '../../SharedComponents/TextArea/index';
 
 
 function Contact() {
@@ -33,6 +34,7 @@ const handleSubmit = (e) => {
 
   async function sendEmail (e){
     e.preventDefault();
+    console.log('Mensaje enviado');
     if(isSubmit){
      await emailjs.sendForm('service_vmonm0i', 'template_x1o4y7q', e.target, 'gZGdSovCh9WOdI9Lq')
       .then((result) => {
@@ -84,16 +86,17 @@ const handleSubmit = (e) => {
                   </button>
                   <form className='message-inputs' onSubmit={handleSubmit}>
                   <div className='from-input-container'>
-                    <InputField placeholder='Nombre' name='fullname' value={formValues.fullname} onChange={handleChange} error = {formErrors.fullname} />
+                    <InputField text={'text'} placeholder='Nombre' name='fullname' value={formValues.fullname} onChange={handleChange} error = {formErrors.fullname} />
                   </div>
                   <div className='from-input-container'>
-                    <InputField placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error = {formErrors.email} />
+                    <InputField text={'text'}  placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error = {formErrors.email} />
                   </div>
                   <div className='from-input-container'>
-                    <textarea name="message" id="" cols="40" rows="5" className='from-text-area ' value={formValues.message} onChange={handleChange}></textarea>
-                    {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.message}</p>}
+                  <TextArea placeholder='Mensaje' name="message" cols="40" rows="5" value={formValues.message} onChange={handleChange} error={formErrors.message}/>
                   </div>
+                  <div>
                     <Button  text='Enviar' variant='secondary' size='big' />
+                  </div>
                   </form>
                 </>
             }
