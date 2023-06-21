@@ -1,7 +1,5 @@
 import React from 'react';
 import './Main.css';
-import Header from '../../SharedComponents/Header/Header';
-import Footer from '../../SharedComponents/Footer/index';
 import SocialMedia from '../../SharedComponents/SocialMedia/index';
 import Contact from '../../SharedComponents/Contact';
 import Descriptions from '../../SharedComponents/TutorialDescriptions/index';
@@ -13,7 +11,6 @@ import Button from '../../SharedComponents/Button/index';
 function Main() {
   return (
     <>
-    <Header/>
           <section className='slider-conteiner'>
             <div className='slider-text'>
                   <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
@@ -33,7 +30,6 @@ function Main() {
           <div id="third-section">
             <SocialMedia/>
           </div>
-    <Footer/>
     </>
   );
 }

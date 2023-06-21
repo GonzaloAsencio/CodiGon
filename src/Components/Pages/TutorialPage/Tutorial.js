@@ -4,14 +4,12 @@ import Card from '../../SharedComponents/Card/Cards';
 import  '../../SharedComponents/Card/Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import Footer from '../../SharedComponents/Footer';
 
 
-function Tutorial() {
-  const [searchText,setSeach] = useState('');
+export const Tutorial = ({searchText}) => {
+  
   const [languageText,setLanguage] = useState('');
   const buttonList = document.querySelectorAll('.btn');
-  
   const handleClick = (event, message) => {
     if (!event.currentTarget.classList.contains('selected-button')) {
           buttonList.forEach((item) =>
@@ -32,13 +30,10 @@ function Tutorial() {
             <button  className='btn'  onClick={(event) => handleClick(event, "unity")}>UNITY</button>
             <button className='btn'  onClick={(event) => handleClick(event, "csharp")}>C#</button>
           </div>
-          <div className='search-bar'>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <input type="text" placeholder="Buscar.." onChange ={(info) => setSeach(info.target.value)}/>
+          <div className='border-cards'>
+           <Card search={searchText} language ={languageText}/>
           </div>
-          <Card search={searchText} language ={languageText}/>
         </div>
-    <Footer/>
   </>
   );
 }
