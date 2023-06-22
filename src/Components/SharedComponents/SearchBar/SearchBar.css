@@ -1,38 +1,43 @@
 .search-box{
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+    margin-right: 0.5rem;
 }
 .search-box.active{
-    width: 350px;
+    width: 250px;
 }
 .search-box > input{
     width: 100%;
     height: 100%;
+    text-indent: 2rem;
     border: none;
     outline: none;
     background: #ffff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 50px;
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
+.search-box > input::placeholder{
+ color: #b2bec3;
+}
 .search-box > input.active{
     opacity: 1;
 }
-
 .search-btn{
     position: absolute;
     z-index: 1;
     top:50%;
     right: 0px;
-    height: 50px;
-    width: 50px;
-    color:red;
+    height: 35px;
+    width: 35px;
+    color:#fff;
+    font-weight: bold;
     transform: translateY(-50%);
-    background-color: #fff;
-    line-height: 50px;
+    background-color: #0984e3;
+    line-height: 35px;
     font-size: 1.5rem;
     text-align: center;
     border-radius: 50px;
@@ -41,22 +46,24 @@
 .search-btn.active{
     right: 0px;
     color:#ffff;
-    transform: translateY(-50%);
-    background-color: red;
-    line-height: 50px;
-    font-size: 1.5rem;
+    transform: translateY(-50%)  rotate(360deg);
+    background-color: #0984e3;
 }
 
-.cancel-btn{
-    position: absolute;
-    top:50%;
-    right:20px;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-.cancel-btn.active{
-    right: -40px;
-    transform: translateY(-50%) rotate(360deg);
+
+@media screen and (min-width: 720px) {
+    .search-box{
+        height: 60px;
+        width: 60px;
+    }
+    .search-box.active{
+        width: 350px;
+    }
+    .search-btn{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 2rem;
+    }
+
 }

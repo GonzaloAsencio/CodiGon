@@ -56,33 +56,16 @@
     justify-content: space-evenly;
 }
 
+.search-bar{
+    display: contents;
+    margin-right: 1rem;
+}
+.non-display{
+    display: none;
+}
+
 @media(min-width: 768px){
   .burguer{
     display: none;
-}
-.links{
-  display: flex;
-}
-.nav-links{
-  color: #b2bec3;
-  margin-left: 1rem;
-  font-weight: inherit;
-  font-size: 1.5rem;
-}
-.nav-container{
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-direction: row;
-}
-.nav-links-active{
-  color: white;
-  font-size: 2.5rem;
-  border-color: #0984e3;
-  border-style: solid;
-  border-bottom-color: #fdcb6e;
-  text-decoration: none;
-
 }
 }

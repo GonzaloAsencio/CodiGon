@@ -1,38 +1,46 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useState,useRef} from 'react';
 import './SearchBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass,faXmark } from '@fortawesome/free-solid-svg-icons';
 
+
+//Limpiar el input cuando cancelo
 const SearchBar = ({type, placeholder,onChange}) => {
+  const searchBtn = useRef();
+  const searchBox = useRef();
+  const searchInput = useRef();
+  const [clicked, setClicked] = useState(false);
+  
+  const handleClick = () => {
+    setClicked(!clicked);
+  }
 
 useEffect(() => {
-const searchBtn = document.querySelector('.search-btn');
-const cancelBtn = document.querySelector('.cancel-btn');
-const searchBox = document.querySelector('.search-box');
-const searchInput = document.querySelector('.search-input');
+      if(clicked){
+        searchBox.current.classList.add('active');
+        searchBtn.current.classList.add('active');
+        searchInput.current.classList.add('active');
+      }else {
+        searchBox.current.classList.remove('active');
+        searchBtn.current.classList.remove('active');
+        searchInput.current.classList.remove('active');
+      };
+}, [clicked, handleClick]);
 
-searchBtn.onclick = () => {
-    searchBox.classList.add('active');
-    searchBtn.classList.add('active');
-    searchInput.classList.add('active');
-    cancelBtn.classList.add('active');
-}
-cancelBtn.onclick = () => {
-    searchBox.classList.remove('active');
-    searchBtn.classList.remove('active');
-    searchInput.classList.remove('active');
-    cancelBtn.classList.remove('active');
-}
-}, []);
+
+useEffect(() => {
+searchInput.current.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    handleClick();
+  }
+});
+}, [clicked, handleClick]);
 
 return (
-    <div className='search-box'>
-    <input className='search-input' type={type} placeholder={placeholder} onChange ={onChange}/>
-    <div className='search-btn'>
-      <FontAwesomeIcon icon={faMagnifyingGlass} />
-    </div>
-    <div className='cancel-btn'>
-      <FontAwesomeIcon icon={faXmark} />
+    <div className='search-box' ref={searchBox}>
+    <input className='search-input'ref={searchInput} type={type} placeholder={placeholder} onChange ={onChange}/>
+    <div className='search-btn ' ref={searchBtn} onClick={handleClick}>
+      <FontAwesomeIcon  icon={!clicked ? faMagnifyingGlass :faXmark} />
     </div>
   </div>
   );

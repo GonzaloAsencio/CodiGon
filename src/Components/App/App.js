@@ -14,6 +14,7 @@ const EditPostLayout = lazy(() => import('../Pages/EditorPage/index'));
 
 function App() {
   const [response,setResponse] = useState({});
+
   return (
     <UserContextProvider>
     <Suspense fallback={<div>Loading...</div>}>
@@ -21,7 +22,8 @@ function App() {
         <Routes>
           <Route path='/' exact Component={MainLayout}/>
           <Route path='/tutorial'
-           element= {<TutorialsLayout searchText={response}/>}/>
+            element= {<TutorialsLayout searchText={response}/>}
+           />
           <Route path='/register' exact Component={RegisterLayout}/>
           <Route path='/login' exact Component={LoginLayout}/>
           <Route path='/create' exact Component={CreatePostLayout}/>
