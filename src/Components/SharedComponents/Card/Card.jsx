@@ -2,13 +2,14 @@
 import React from 'react';
 import './Card.css';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 function Card({_id,title, summary,cover,color}) {
     const cardStyle = {
         background: color
       };
 return (
-    <div className='card' style = {cardStyle} >
+    <motion.div initial={{'opacity':0, 'scale':0}} animate={{'opacity':1, 'scale':1}} exit={{'opacity':0, 'scale':0}} transition={{'duration':0.5}} className='card' style = {cardStyle} >
         <div className='card-body'>
             <div className='card-image'>
                 <img src={'http://localhost:4000/'+cover} alt=''/>
@@ -23,7 +24,7 @@ return (
             </div>
         </div>
 
-    </div>
+    </motion.div >
 );
 }
 export default Card;

@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
+import {motion,AnimatePresence} from 'framer-motion';
 
 function Cards({search,language}){
 
@@ -30,7 +31,8 @@ function Cards({search,language}){
     }
 
 return(
-    <div className="cards">
+    <motion.div initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
+        <AnimatePresence>
         {posts.filter((item) =>{
             return  language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
         }).map(post => (
@@ -38,7 +40,8 @@ return(
                 <Card {...post}/>
             </div>
         ))}
-    </div>
+        </AnimatePresence>
+    </motion.div>
   );
 }
 
