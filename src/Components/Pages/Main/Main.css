@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&family=Secular+One&display=swap');
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-h2{
-  font-family: 'Secular One', sans-serif;
-}
-p{
-  font-family: 'Questrial', sans-serif;
-}
-a{
-  font-family: 'Questrial', sans-serif;
-}
-button{
-  font-family: 'Archivo Black', sans-serif;
-}
-body {
-  font-size: 1.6rem;
-}
-
 .slider-conteiner{
   display: flex;
   flex-direction: column;

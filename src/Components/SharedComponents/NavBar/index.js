@@ -8,7 +8,7 @@ import SearchBar from '../SearchBar/index';
 
 export const Navbar = ({props }) => {
   const { pathname } = useLocation();
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   const {setUserInfo,userInfo} = useContext(UserContext);
   const [searchText,setSeach] = useState('');
 
@@ -22,7 +22,6 @@ export const Navbar = ({props }) => {
 
 useEffect(() => {
     const list = document.querySelectorAll('.nav-links');
-
     function activeLink(){
       list.forEach((item) =>
       item.classList.remove('nav-links-active'));

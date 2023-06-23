@@ -6,14 +6,15 @@ import {faMagnifyingGlass,faXmark } from '@fortawesome/free-solid-svg-icons';
 
 //Limpiar el input cuando cancelo
 const SearchBar = ({type, placeholder,onChange}) => {
+  
   const searchBtn = useRef();
   const searchBox = useRef();
   const searchInput = useRef();
   const [clicked, setClicked] = useState(false);
   
-  const handleClick = () => {
+const handleClick = () => {
     setClicked(!clicked);
-  }
+}
 
 useEffect(() => {
       if(clicked){
@@ -24,6 +25,7 @@ useEffect(() => {
         searchBox.current.classList.remove('active');
         searchBtn.current.classList.remove('active');
         searchInput.current.classList.remove('active');
+        searchInput.current.value = '';
       };
 }, [clicked, handleClick]);
 

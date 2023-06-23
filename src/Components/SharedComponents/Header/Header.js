@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './Header.css';
+/*BORRAR  EL CSS DEL HEADER
+import './Header.css';*/
 import Navbar from '../NavBar';
 import React from 'react';
 

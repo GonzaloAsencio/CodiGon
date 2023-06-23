@@ -1,8 +1,9 @@
 import React,{lazy,Suspense, useState} from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import { UserContextProvider } from '../UserContext';
 import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
+import './App.css';
 
 const RegisterLayout = lazy(() => import('../Pages/ReginsterPage/index'));
 const LoginLayout = lazy(() => import('../Pages/LoginPage/index'));
@@ -21,8 +22,10 @@ function App() {
       <Header setResponse={setResponse}/>
         <Routes>
           <Route path='/' exact Component={MainLayout}/>
-          <Route path='/tutorial'
-            element= {<TutorialsLayout searchText={response}/>}
+          <Route  
+          forceRefresh={true}
+          path='/tutorial'
+          element= {<TutorialsLayout searchText={response}/>}
            />
           <Route path='/register' exact Component={RegisterLayout}/>
           <Route path='/login' exact Component={LoginLayout}/>
