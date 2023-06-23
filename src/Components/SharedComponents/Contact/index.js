@@ -7,7 +7,11 @@ import paperFlyImage2 from '../../../assets/Image/ContactMe/paperfly2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEnvelope,faEnvelopeOpen, faCheck} from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
+import Button from '../../SharedComponents/Button/index';
 import inputsValidatios from './inputsValidatios';
+import InputField from '../../SharedComponents/Input/index';
+import TextArea from '../../SharedComponents/TextArea/index';
+
 
 function Contact() {
   const {ref: imageRef, inView: myImageIsVisible} = useInView();
@@ -30,6 +34,7 @@ const handleSubmit = (e) => {
 
   async function sendEmail (e){
     e.preventDefault();
+    console.log('Mensaje enviado');
     if(isSubmit){
      await emailjs.sendForm('service_vmonm0i', 'template_x1o4y7q', e.target, 'gZGdSovCh9WOdI9Lq')
       .then((result) => {
@@ -81,18 +86,17 @@ const handleSubmit = (e) => {
                   </button>
                   <form className='message-inputs' onSubmit={handleSubmit}>
                   <div className='from-input-container'>
-                    <input type="text" placeholder='Nombre' className='from-input' name='fullname' value={formValues.fullname} onChange={handleChange} />
-                    {<p style={{ color: "#ff7675",margin:'2px'}}>{formErrors.fullname}</p>}
+                    <InputField text={'text'} placeholder='Nombre' name='fullname' value={formValues.fullname} onChange={handleChange} error = {formErrors.fullname} />
                   </div>
                   <div className='from-input-container'>
-                    <input type="text" placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} />
-                    {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.email}</p>}
+                    <InputField text={'text'}  placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error = {formErrors.email} />
                   </div>
                   <div className='from-input-container'>
-                    <textarea name="message" id="" cols="40" rows="5" className='from-text-area ' value={formValues.message} onChange={handleChange}></textarea>
-                    {<p style={{ color: "#ff7675",margin:'2px' }}>{formErrors.message}</p>}
+                  <TextArea placeholder='Mensaje' name="message" cols="40" rows="5" value={formValues.message} onChange={handleChange} error={formErrors.message}/>
                   </div>
-                  <button className='from-text-button'>Enviar</button>
+                  <div>
+                    <Button  text='Enviar' variant='secondary' size='big' />
+                  </div>
                   </form>
                 </>
             }

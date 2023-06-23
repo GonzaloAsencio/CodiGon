@@ -1,8 +1,9 @@
-import ReactQuill from "react-quill";
+import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './EditorPost.css';
-import {useState} from "react";
-import {Navigate} from "react-router-dom";
+import {useState} from 'react';
+import {Navigate} from 'react-router-dom';
+import Button from '../../SharedComponents/Button/index';
 
 
 export default function CreatePost() {
@@ -87,8 +88,10 @@ export default function CreatePost() {
       </select>
       </div>
     </div>
-      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats}/>
-      <button style={{marginTop:'5px'}}>Create post</button>
+      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats} style={{'marginBotton':`1rem`}}/>
+      <div style={{'paddingTop':`1rem`}}>
+        <Button text='Create Post' size={'medium'} />
+      </div>
     </form>
   );
 }

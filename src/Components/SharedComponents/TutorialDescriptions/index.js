@@ -4,6 +4,7 @@ import './TutorialDescription.css';
 import Scripty from '../../../assets/Image/Main/Scripty.png';
 import Unity from '../../../assets/Image/Main/Unity.png';
 import { useInView } from 'react-intersection-observer';
+import Button from '../../SharedComponents/Button/index';
 
 function TutorailDescription() {
     const {ref: firstRef, inView: myElementIsVisible} = useInView();
@@ -26,7 +27,9 @@ function TutorailDescription() {
                 <p ref={firstDescriptionRef} className={`introduction-description-subText ${firstDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1.5s` }}>
                     En esta sección aprenderas la lógica basica necesaria para convertirte en un desarrollador profesional.
                 </p>
-                <button ref={firstButtonRef} className={`${firstButtonVisible ?  animation.spawnRightAnimation:''}`}  style={{ 'animationDelay': `2s` }}>Hola C#</button>
+                <div  ref={firstButtonRef} className={`${firstButtonVisible ?  animation.spawnRightAnimation:''}`}  style={{ 'animationDelay': `2s` ,'opacity':`0`,'paddingTop':`1rem`}}>
+                <Button text='Hola C#' path={'/tutorial'} size ={'medium'} textSize={'medium'} />
+                </div>
             </div>
         </div>
         <div className='introduction-image'>
@@ -38,7 +41,9 @@ function TutorailDescription() {
                 <p ref={secondDescriptionRef} className={`introduction-description-subText ${secondDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.7s` }}>
                    Descubre todo lo necesario para convertirte en un desarrollador de Videojuegos.
                 </p>
-                <button ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `2.8s` }}>Ir a Unity</button>
+                <div  ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `2.8s` ,'opacity':`0` ,'paddingTop':`1rem` }}>
+                    <Button text='Ir a Unity' path={'/tutorial'} size ={'medium'} textSize={'medium'} />
+                </div>
             </div>
         </div>
     </section>
