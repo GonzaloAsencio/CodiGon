@@ -2,21 +2,29 @@ import React from "react";
 import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
-import {motion,AnimatePresence} from 'framer-motion';
+import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
+import {motion,AnimatePresence, delay} from 'framer-motion';
 
 function Cards({search,language}){
 
     const [posts,setPosts] = useState([]);
+
+    let result = posts.filter((item) => {
+        CalculateColor();
+        return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
+    });
+
     useEffect(() => {
     fetch('http://localhost:4000/post').then(response => {
         response.json().then(posts => {
         setPosts(posts);
         });
-    });
+    }).catch(error => {
+        console.log('Error getting fake data: ' + error);
+        });
     }, []);
 
     CalculateColor();
-
 
     function CalculateColor(){
         var initialColor =0;
@@ -33,13 +41,17 @@ function Cards({search,language}){
 return(
     <motion.div initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
         <AnimatePresence>
-        {posts.filter((item) =>{
-            return  language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
-        }).map(post => (
-            <div className="cards-conteiner" key={post._id}>
-                <Card {...post}/>
-            </div>
-        ))}
+            {result.length > 0 ?
+                (result).map(post => (
+                    <div className="cards-conteiner" key={post._id}>
+                        <Card {...post}/>
+                    </div>
+                )):
+                <motion.div initial={{'opacity':0}} animate={{'opacity':1}} transition={{'delay':0.2}} className="cards-error">
+                    <img src={errorImage} alt="" />
+                    <p>POST NO ENCONTRADO</p>
+                </motion.div>
+            }
         </AnimatePresence>
     </motion.div>
   );
