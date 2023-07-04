@@ -3,14 +3,13 @@ import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
 import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
-import {motion,AnimatePresence, delay} from 'framer-motion';
+import {motion,AnimatePresence} from 'framer-motion';
 
 function Cards({search,language}){
 
     const [posts,setPosts] = useState([]);
 
     let result = posts.filter((item) => {
-        CalculateColor();
         return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
     });
 
@@ -39,7 +38,7 @@ function Cards({search,language}){
     }
 
 return(
-    <motion.div initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
+    <motion.div layout initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
         <AnimatePresence>
             {result.length > 0 ?
                 (result).map(post => (

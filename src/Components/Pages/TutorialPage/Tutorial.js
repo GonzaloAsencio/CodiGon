@@ -30,7 +30,7 @@ export const Tutorial = ({searchText}) => {
             <button  className='btn' ref={unityButton} onClick={(event) => handleClick(event, "unity")}>UNITY</button>
             <button className='btn'  ref={csharpButton} onClick={(event) => handleClick(event, "csharp")}>C#</button>
           </div>
-          <div className='border-cards'>
+          <div className='all-cards-containter'>
            <Card search={searchText} language ={languageText}/>
           </div>
         </div>
