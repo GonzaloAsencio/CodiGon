@@ -21,15 +21,6 @@ export const Navbar = ({props }) => {
   }
 
 useEffect(() => {
-    const list = document.querySelectorAll('.nav-links');
-    function activeLink(){
-      list.forEach((item) =>
-      item.classList.remove('nav-links-active'));
-      this.classList.add('nav-links-active');
-}
-  list.forEach((item) =>
-  item.addEventListener('click',activeLink));
-
     if(username){
       fetch('http://localhost:4000/profile', {
         credentials: 'include',

@@ -1,27 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&family=Secular+One&display=swap');
 /*--- Card Size ---*/
 .card{
-   border-radius: 15px;
-   width: 100%;
-   height: 100%;
-   max-width: 18rem;
-   max-height: 25rem;
-   cursor:pointer;
-}
-
-.card:hover{
-    box-shadow: 0px 0px 15px -5px;
-    transition: all 0.3s linear;
+    max-width: 300px;
+    max-height: 300px;
+    cursor:pointer;
+    overflow: hidden;
 }
 
 /*--- Card Container ---*/
-
 .card-body{
-  display: flex;
-  flex-direction: column;
   position: relative;
-  overflow: hidden;
+  display: block;
+  box-sizing: border-box;
 }
-
 .card-body > a {
     width: 100%;
     height: 100%;
@@ -39,60 +30,100 @@
     width: 100%;
 }
 
-.card-image > img{
-    width: 300px;
-    height: 150px;
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 15px 15px 0px 0px;
+.card-image{
+    display: block;
+    box-sizing: border-box;
 }
 
+.card-image > img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
 .card-tittle{
-    font-size: 16px;
+    font-size: 1em;
     margin:0px;
 }
-
 .card-text-conteiner{
-    padding:5px;
-    color: white;
-    font-size: 12px;
-    margin: 0px;
-    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    box-sizing: inherit;
+    word-break: break-word;
+    white-space: pre-line;
+    background-color: white;
+    padding:0.7rem;
 }
+
+.card-text-conteiner > p{
+    opacity: 0;
+    box-sizing: border-box;
+    display: none;
+    font-size: 0.8em;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+    visibility: hidden;
+    overflow: hidden;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    word-break: break-word;
+    letter-spacing: 0;
+}
+
 
 /*--- Cards Container --- MOVER A OTRO CSS*/
 .cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    padding:20px;
+    grid-gap: 40px;
 }
 
 .cards-conteiner{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    display: block;
+    box-sizing: border-box;
     transition: 0.3s;
     animation: ease-in-out;
 }
 
-.cards-conteiner:hover {
-    transform: scale(1.1);
+
+/*--- Cards-Error ---*/
+.cards-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.cards-error > p{
+    margin: 0;
+}
+.cards-error > img{
+    padding-right: 10px;
+    width: 200px;
+    height: 200px;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1140px) {
+    .cards-error > img{
+        width: 400px;
+        height: 400px;
+       }
     .card-image > img{
-        width: 500px;
-        height: 200px;
+        height: 250px;
     }
     .card{
-        max-width: 25rem;
-     }
-    .card-tittle{
-        font-size: 24px;
+        max-width: 400px;
+        max-height: 400px;
+    
     }
-     .card-text-conteiner > p{
-        font-size: 16px;
-    }
+
 }
+
 

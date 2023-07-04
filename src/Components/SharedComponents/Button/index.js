@@ -32,7 +32,7 @@ const ButtonStyle = styled.button`
   cursor: ${(props) => props.disabled ? 'default' : 'pointer'};
   color: ${(props) => variantStyles[props.variant].color};
   padding: ${(props) => props.size === 'big' ? '1.5rem 2.2rem' : props.size === 'medium' ?  '1.5rem 1.5rem' : '1rem 1.2rem'};
-  font-size: ${(props) => props.textSizee === 'big' ? '2.3rem' : props.textSize === 'medium' ?  '1.8rem' : '1.6rem'};
+  font-size: 1rem;
   border-radius: 0.5rem;
   font-weight: bold;
   transition: background-color 0.25s ease-out;
@@ -48,6 +48,9 @@ const ButtonStyle = styled.button`
     background-color: ${(props) => variantStyles[props.variant].backgroundDisabled};
     color: ${(props) => variantStyles[props.variant].colorDisabled};
   }
+  @media (min-width: 720px) {
+    font-size: ${(props) => props.textSizee === 'big' ? '2.3rem' : props.textSize === 'medium' ?  '1.8rem' : '1.6rem'};
+  }
 `;
 
 const Button = ({ text, variant,onClick, disabled,size,textSize,path}) => {
@@ -55,7 +58,6 @@ const Button = ({ text, variant,onClick, disabled,size,textSize,path}) => {
   const navigate = useNavigate()
   const onAction = () => {
     if (path !== undefined) {
-      console.log(path);
       navigate(path);
     } else {
       onClick();
@@ -79,13 +81,9 @@ const Button = ({ text, variant,onClick, disabled,size,textSize,path}) => {
 };
 
 Button.propTypes = {
-  /** Text for button */
   text: PropTypes.string.isRequired,
-  /** Set the button variant */
   variant: PropTypes.oneOf(['primary', 'secondary']),
-  /** Indicates that is disabled */
   isDisabled: PropTypes.bool,
-  /** Callback onClick */
   onClick: PropTypes.func,
 };
 

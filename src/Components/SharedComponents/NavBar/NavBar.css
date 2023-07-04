@@ -48,6 +48,7 @@
     left: 0;
     right: 0;
     background-color: #74b9ff;
+    z-index: 99;
 }
 .nav-container{
     height: 75vh;

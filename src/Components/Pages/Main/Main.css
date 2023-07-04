@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: 10vh;
 }
 
 .slider-text> p{
@@ -38,9 +37,9 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  margin-bottom: 2vh;
+  margin-bottom: 14vh;
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   width: 4em;
   height:4em;
   background-color: #FFF;
@@ -102,15 +101,3 @@ animation-iteration-count: infinite;
   }
 }
 
-
-@media screen and (max-width: 360px) {
-  .slider-text{
-    font-size: 1.4rem;
-  }
-}
-@media screen and (min-width: 720px) {
-  .link{
-    font-size: 2.3em;
-}
-
-}

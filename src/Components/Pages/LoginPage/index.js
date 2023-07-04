@@ -8,8 +8,8 @@ export default function LoginPage(){
     const [redirect,setRedirect] = useState(false);
     const {setUserInfo} = useContext(UserContext);
     
-
     async function Login(ev){
+        console.log(ev);
         ev.preventDefault();
        const response = await fetch ('http://localhost:4000/login',{
             method:'POST',
