@@ -19,7 +19,7 @@ const TextAreaStyle = styled.textarea`
     }
 `;
 
-const TextAreaField = ({ label, name, placeholder, columns, error = '', value, onChange}) => {
+const TextAreaField = ({ label, name, placeholder, columns, error = '', value, onChange, isRequired}) => {
   return (
     <div>
       {label && <label>{label}</label>}
@@ -30,6 +30,7 @@ const TextAreaField = ({ label, name, placeholder, columns, error = '', value, o
         onChange={onChange}
         value={value}
         error={error}
+        required={isRequired}
       />
       {error && <p style={{ color: "#ff7675",margin:'2px'}}>{error}</p>}
     </div>

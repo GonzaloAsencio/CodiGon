@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import contactAnimation from './Contact.module.css';
@@ -14,37 +14,43 @@ import TextArea from '../../SharedComponents/TextArea/index';
 
 
 function Contact() {
-  const {ref: imageRef, inView: myImageIsVisible} = useInView({triggerOnce: true});
+  const form = useRef();
+  const {ref: imageRef, inView: myImageIsVisible} = useInView();
   const initialValues = { fullname: "", email: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [sendMessage, setSendMessage] = useState(false);
+  const [target, setTarget] = useState();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(inputsValidatios(formValues));
+    e.target.reset();
     setIsSubmit(true);
-    sendEmail(e);
+    setTarget(e.target);
+    setFormErrors(inputsValidatios(formValues));
   };
 
-  async function sendEmail (e){
-    e.preventDefault();
-    console.log('Mensaje enviado');
-    if(isSubmit){
-     await emailjs.sendForm('service_vmonm0i', 'template_x1o4y7q', e.target, 'gZGdSovCh9WOdI9Lq')
+  useEffect(()=> {
+  if(Object.keys(formErrors).length === 0 && isSubmit){
+    emailjs.sendForm('service_vmonm0i', 'template_x1o4y7q', target, 'gZGdSovCh9WOdI9Lq')
       .then((result) => {
+          setSendMessage(true);
           console.log(result.text);
       }, (error) => {
+          setSendMessage(false);
           console.log(error.text);
       });
-      e.target.reset();
     }
-  };
+    setIsSubmit(false);
+  },[formErrors, isSubmit, target]);
+
+
 
   useEffect(()=> {
     const messageCircle = document.querySelector('.messageIcon');
@@ -63,16 +69,19 @@ const handleSubmit = (e) => {
       };
     });
   },[]);
+  
+
+  //CAMBIAR POR UN STATE PARA QUE PAREZCA
 
   return (
     <div className='contact-me'>
         <div className='message-container'>
           <div className='message-title'>
-            {Object.keys(formErrors).length === 0 && isSubmit ? <h2> MUCHAS GRACIAS POR CANTACTARTE CONMIGO</h2> :  <h2>¿QUERES CONTACTARTE CONMIGO?</h2> }
-            {Object.keys(formErrors).length === 0 && isSubmit ? <p>Me pondré en contacto con usted pronto.</p> : <p>ENVÍAME UN MENSAJE</p> }
+            {sendMessage ? <h2> MUCHAS GRACIAS POR CANTACTARTE CONMIGO</h2> :  <h2>¿QUERES CONTACTARTE CONMIGO?</h2> }
+            {sendMessage ? <p>Me pondré en contacto con usted pronto.</p> : <p>ENVÍAME UN MENSAJE</p> }
           </div>
           <div className='message-text'>
-              {Object.keys(formErrors).length === 0 && isSubmit?
+              {sendMessage?
               <div className='succesMessage'>
                 <div className='msgIconBackground'>
                   <FontAwesomeIcon className='msgSuccesIcon'icon={faCheck}/>
@@ -84,15 +93,15 @@ const handleSubmit = (e) => {
                     <FontAwesomeIcon className='msgicon' icon={faEnvelope} />
                     <FontAwesomeIcon className='msgiconOpen' icon={faEnvelopeOpen} />
                   </button>
-                  <form className='message-inputs' onSubmit={handleSubmit}>
+                  <form ref={form} className='message-inputs' onSubmit={handleSubmit}>
                   <div className='from-input-container'>
                     <InputField text={'text'} placeholder='Nombre' name='fullname' value={formValues.fullname} onChange={handleChange} error = {formErrors.fullname} />
                   </div>
                   <div className='from-input-container'>
-                    <InputField text={'text'}  placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error = {formErrors.email} />
+                    <InputField text={'text'}  placeholder='Email' className='from-input' name='email' value={formValues.email} onChange={handleChange} error ={formErrors.email} />
                   </div>
                   <div className='from-input-container'>
-                  <TextArea placeholder='Mensaje' name="message" cols="40" rows="5" value={formValues.message} onChange={handleChange} error={formErrors.message}/>
+                  <TextArea placeholder='Mensaje' name="message" cols="40" rows="5" value={formValues.message} onChange={handleChange} error={formErrors.message} />
                   </div>
                   <div>
                     <Button  text='Enviar' variant='secondary' size='big' />
@@ -108,6 +117,7 @@ const handleSubmit = (e) => {
           </div>
       </div>
   );
+
 }
 
 export default Contact;
