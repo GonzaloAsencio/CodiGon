@@ -14,7 +14,7 @@ import TextArea from '../../SharedComponents/TextArea/index';
 
 
 function Contact() {
-  const {ref: imageRef, inView: myImageIsVisible} = useInView();
+  const {ref: imageRef, inView: myImageIsVisible} = useInView({triggerOnce: true});
   const initialValues = { fullname: "", email: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});

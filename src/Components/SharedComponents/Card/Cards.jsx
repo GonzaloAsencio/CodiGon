@@ -27,7 +27,7 @@ function Cards({search,language}){
 
     function CalculateColor(){
         var initialColor =0;
-        var ColorPallete=["#55efc4","#81ecec","#74b9ff","#fab1a0","#ff7675","#fd79a8"];
+        var ColorPallete=["#55efc4","#81ecec","#74b9ff","#a29bfe","#fab1a0","#fd79a8"];
          posts.forEach(element => {
                 element.color = ColorPallete[initialColor];
                 initialColor++;

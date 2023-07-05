@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef,useEffect} from 'react';
 import animation from './TutorialDescriptionAnimation.module.css';
 import './TutorialDescription.css';
 import Scripty from '../../../assets/Image/Main/Scripty.png';
@@ -7,15 +7,17 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../../SharedComponents/Button/index';
 
 function TutorailDescription() {
-    const {ref: firstRef, inView: myElementIsVisible} = useInView();
-    const {ref: firstTitleRef, inView: firstTitleVisible} = useInView();
-    const {ref: firstDescriptionRef, inView: firstDescriptionVisible} = useInView();
-    const {ref: firstButtonRef, inView: firstButtonVisible} = useInView();
-    const {ref: secondRef, inView: mySecondElementIsVisible} = useInView();
-    const {ref: secondTitleRef, inView: secondTitleVisible} = useInView();
-    const {ref: secondDescriptionRef, inView: secondDescriptionVisible} = useInView();
-    const {ref: secondButtonRef, inView: secondButtonVisible} = useInView();
 
+    const {ref: firstRef, inView: myElementIsVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: firstTitleRef, inView: firstTitleVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: firstDescriptionRef, inView: firstDescriptionVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: firstButtonRef, inView: firstButtonVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: secondRef, inView: mySecondElementIsVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: secondTitleRef, inView: secondTitleVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: secondDescriptionRef, inView: secondDescriptionVisible} = useInView({triggerOnce: true,threshold: 0.1});
+    const {ref: secondButtonRef, inView: secondButtonVisible} = useInView({triggerOnce: true,threshold: 0.1});
+
+ 
     return (
     <section className='introduction'>
         <div className='introduction-image'>
@@ -33,15 +35,15 @@ function TutorailDescription() {
             </div>
         </div>
         <div className='introduction-image'>
-            <img src={Unity} alt="" ref={secondRef} className={`${mySecondElementIsVisible ? animation.spawnRightAnimation :''}`} style={{ 'animationDelay': `3s` }}/>
+            <img src={Unity} alt="" ref={secondRef} className={`${ mySecondElementIsVisible? animation.spawnRightAnimation :''}`} style={{ 'animationDelay': `2.8s` }}/>
             <div className='introduction-description'>
-                <h2 ref={secondTitleRef} className={`introduction-description-text ${secondTitleVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.2s`}}>
+                <h2 ref={secondTitleRef} className={`introduction-description-text ${ secondTitleVisible?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.2s`}}>
                     Para desarrollar Videojuegos en Unity
                 </h2>
                 <p ref={secondDescriptionRef} className={`introduction-description-subText ${secondDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.7s` }}>
                    Descubre todo lo necesario para convertirte en un desarrollador de Videojuegos.
                 </p>
-                <div  ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `2.8s` ,'opacity':`0` ,'paddingTop':`1rem` }}>
+                <div  ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `3s` ,'opacity':`0` ,'paddingTop':`1rem` }}>
                     <Button text='Ir a Unity' path={'/tutorial'} size ={'medium'} textSize={'medium'} />
                 </div>
             </div>

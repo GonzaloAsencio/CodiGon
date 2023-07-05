@@ -108,8 +108,8 @@
 }
 
 .social-media-image-conteiner > img{
-    width: 400px;
-    height: 250px;
+    width: 500px;
+    height: 350px;
 }
 
 .sm-base-image{
@@ -130,6 +130,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 3rem 3rem 0 0;
 }
 .social-media-text{
     display: flex;
@@ -154,18 +155,18 @@
 
 @media screen and (min-width: 720px) {
     .warpper .icon .social-icon-conteiner{
-        height: 50px;
-        width: 50px;
-    }
-    .warpper .icon .toolTip{
-        padding:10px 18px;
+        height: 75px;
+        width: 75px;
     }
     .warpper .icon {
         margin: 1.8rem;
     }
     .warpper .icon .toolTip{
-        font-size: 18px;
+        font-size: 24px;
         padding:10px 18px;
+    }
+    .warpper .icon .social-icon-conteiner .iconn {
+        font-size: 32px;
     }
 }
 
@@ -179,7 +180,6 @@
 @media screen and (min-width: 1920px) {
     .social-media-image-conteiner{
         display: flex;
-        margin-left:220px;
     }
 
 }

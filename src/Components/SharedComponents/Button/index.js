@@ -31,7 +31,7 @@ const ButtonStyle = styled.button`
   border: 1px solid ${(props) => variantStyles[props.variant].borderColor};
   cursor: ${(props) => props.disabled ? 'default' : 'pointer'};
   color: ${(props) => variantStyles[props.variant].color};
-  padding: ${(props) => props.size === 'big' ? '1.5rem 2.2rem' : props.size === 'medium' ?  '1.5rem 1.5rem' : '1rem 1.2rem'};
+  padding: ${(props) => props.size === 'big' ? '1.2rem 2rem' : props.size === 'medium' ?  '1.5rem 1.5rem' : '1rem 1.2rem'};
   font-size: 1rem;
   border-radius: 0.5rem;
   font-weight: bold;

@@ -10,7 +10,7 @@
 .all-cards-containter{
     display: grid;
     place-items: center center;
-    width:90%;
+    width:80%;
 }
 /*----------------------------------------------------*/
 .buttons{
