@@ -43,6 +43,7 @@ return(
             {result.length > 0 ?
                 (result).map(post => (
                     <div className="cards-conteiner" key={post._id}>
+                        {console.log(post)}
                         <Card {...post}/>
                     </div>
                 )):

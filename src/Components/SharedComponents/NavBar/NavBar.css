@@ -1,7 +1,9 @@
 .nav-style{
     position: relative;
     width: 100%;
-    padding: .2rem;
+    max-width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     background-color: #0984e3;
     display: flex;
     text-align: center;

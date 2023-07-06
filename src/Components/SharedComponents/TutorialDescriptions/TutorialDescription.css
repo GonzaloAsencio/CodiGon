@@ -64,12 +64,6 @@
     opacity: 0;
 }
 
-@media screen and (min-width: 720px) {
-  .introduction-description-subText{
-    display: flex;
-  }
-
-}
 
 @media screen and (min-width: 1140px) {
   .introduction-description-subText{

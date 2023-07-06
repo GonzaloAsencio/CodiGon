@@ -81,11 +81,24 @@
 /*LO CAMBIE A 80% para mejorar el centor, peros e puede borrar a 100*/
 .cards{
     display: grid;
-    width: 80%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    place-items: center center;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-    padding:20px;
-    grid-gap: 40px;
+    grid-gap: 20px;
+    position: relative;
 }
+.cards-error{
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
 
 .cards-conteiner{
     display: block;
@@ -96,18 +109,10 @@
 
 
 /*--- Cards-Error ---*/
-.cards-error{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
 .cards-error > p{
     margin: 0;
 }
 .cards-error > img{
-    padding-right: 10px;
     width: 200px;
     height: 200px;
 }
@@ -123,7 +128,9 @@
     .card{
         max-width: 400px;
         max-height: 400px;
-    
+    }
+    .cards{
+        grid-gap: 60px;
     }
 
 }
