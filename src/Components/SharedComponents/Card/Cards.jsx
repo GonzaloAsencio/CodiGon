@@ -58,10 +58,10 @@ return(
             }
         </AnimatePresence>
     </motion.div>
-    <Articles title={'Articulos de Unity'} marker={faUnity} lists={posts.filter((item) => {
+    <Articles title={'Artículos de Unity'} marker={faUnity} lists={posts.filter((item) => {
         return item.icon.toLowerCase().includes('unity');
     })}/>
-     <Articles title={'Articulos de C#'} marker={faCode} lists={posts.filter((item) => {
+     <Articles title={'Artículos de C#'} marker={faCode} lists={posts.filter((item) => {
         return item.icon.toLowerCase().includes('csharp');
     })}/>
     </>

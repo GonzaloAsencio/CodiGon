@@ -82,12 +82,13 @@
 .cards{
     display: grid;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0px 20px 0px;
     place-items: center center;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     grid-gap: 20px;
     position: relative;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
 }
 .cards-error{
     position: unset;
@@ -130,7 +131,7 @@
         max-height: 400px;
     }
     .cards{
-        grid-gap: 60px;
+        grid-gap: 30px;
     }
 
 }
