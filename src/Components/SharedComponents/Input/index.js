@@ -20,12 +20,12 @@ const InputStyle = styled.input`
     }
 `;
 
-function InputField({ name, placeholder, label, value, onChange,text, error = '' }) {
+function InputField({ name, placeholder, label, value, onChange,text, error = '', isRequired , onFocus }) {
   return (
     <div>
       {label && <label>{label}</label>}
-      <InputStyle text={text} name={name} placeholder={placeholder} value={value} onChange={onChange} error={error} />
-      {error && <p style={{ color: "#ff7675",margin:'2px'}}>{error}</p>}
+      <InputStyle text={text} name={name} placeholder={placeholder} value={value} onChange={onChange} error={error} required={isRequired} />
+      {error && <p style={{ color: "#ff7675",margin:'2px', width:'100%'}}>{error}</p>}
     </div>
   );
 }

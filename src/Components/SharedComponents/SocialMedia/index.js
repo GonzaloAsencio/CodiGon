@@ -11,8 +11,8 @@ import { faLinkedinIn, faTwitter, faGithub, faGooglePlay} from '@fortawesome/fre
 
 
 function SocialMedia() {
-  const {ref: iconRef, inView: myIconIsVisible} = useInView();
-  const {ref: smImageRef, inView: mysmImageIsVisible} = useInView();
+  const {ref: iconRef, inView: myIconIsVisible} = useInView({threshold: 0.1});
+  const {ref: smImageRef, inView: mysmImageIsVisible} = useInView({threshold: 0.1});
 
     return (
     <section className='social-media'>
