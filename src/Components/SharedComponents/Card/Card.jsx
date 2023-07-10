@@ -3,7 +3,6 @@ import React from 'react';
 import csharpIncon from '../../../assets/Image/Icons/csharpicon.png';
 import unityIcon from '../../../assets/Image/Icons/unityIcon.png';
 import './Card.css';
-import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
 

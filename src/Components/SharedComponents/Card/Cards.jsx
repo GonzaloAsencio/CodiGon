@@ -2,16 +2,15 @@ import React from "react";
 import { useEffect,useState } from "react";
 import Card from "./Card";
 import "./Card.css";
+import { faUnity} from "@fortawesome/free-brands-svg-icons";
+import { faCode} from "@fortawesome/free-solid-svg-icons"
 import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
 import {motion,AnimatePresence} from 'framer-motion';
+import Articles from '../ArticleList/index';
 
 function Cards({search,language}){
 
     const [posts,setPosts] = useState([]);
-
-    let result = posts.filter((item) => {
-        return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
-    });
 
     useEffect(() => {
     fetch('http://localhost:4000/post').then(response => {
@@ -22,6 +21,11 @@ function Cards({search,language}){
         console.log('Error getting fake data: ' + error);
         });
     }, []);
+
+    let result = posts.filter((item) => {
+        return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
+    });
+
 
     CalculateColor();
 
@@ -38,12 +42,12 @@ function Cards({search,language}){
     }
 
 return(
+    <>
     <motion.div layout initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
         <AnimatePresence>
             {result.length > 0 ?
                 (result).map(post => (
                     <div className="cards-conteiner" key={post._id}>
-                        {console.log(post)}
                         <Card {...post}/>
                     </div>
                 )):
@@ -54,6 +58,13 @@ return(
             }
         </AnimatePresence>
     </motion.div>
+    <Articles title={'Articulos de Unity'} marker={faUnity} lists={posts.filter((item) => {
+        return item.icon.toLowerCase().includes('unity');
+    })}/>
+     <Articles title={'Articulos de C#'} marker={faCode} lists={posts.filter((item) => {
+        return item.icon.toLowerCase().includes('csharp');
+    })}/>
+    </>
   );
 }
 
