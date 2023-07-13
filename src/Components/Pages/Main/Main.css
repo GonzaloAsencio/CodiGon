@@ -99,5 +99,10 @@ animation-iteration-count: infinite;
   .more-tutorials{
     display: none;
   }
+
+  .change-page-button{
+    margin-bottom: 5rem;
+  }
+  
 }
 

@@ -1,4 +1,4 @@
-import React,{useRef,useEffect} from 'react';
+import React from 'react';
 import animation from './TutorialDescriptionAnimation.module.css';
 import './TutorialDescription.css';
 import Scripty from '../../../assets/Image/Main/Scripty.png';
@@ -27,7 +27,7 @@ function TutorailDescription() {
                      Aprende las bases en C#
                 </h2>
                 <p ref={firstDescriptionRef} className={`introduction-description-subText ${firstDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `1.5s` }}>
-                    En esta sección aprenderas la lógica basica necesaria para convertirte en un desarrollador profesional.
+                    Si no tienes experiencia en programación. Esta sección te puede ayudarte a dar los primeros pasos.
                 </p>
                 <div  ref={firstButtonRef} className={`${firstButtonVisible ?  animation.spawnRightAnimation:''}`}  style={{ 'animationDelay': `2s` ,'opacity':`0`,'paddingTop':`1rem`}}>
                 <Button text='Hola C#' path={'/tutorial'} size ={'medium'} textSize={'medium'} />
@@ -41,7 +41,7 @@ function TutorailDescription() {
                     Para desarrollar Videojuegos en Unity
                 </h2>
                 <p ref={secondDescriptionRef} className={`introduction-description-subText ${secondDescriptionVisible ?  animation.spawnFrontAnimaiton:''}`}  style={{ 'animationDelay': `2.7s` }}>
-                   Descubre todo lo necesario para convertirte en un desarrollador de Videojuegos.
+                   Aprende todo lo necesario para convertirte en un desarrollador de Videojuegos profesional.
                 </p>
                 <div  ref={secondButtonRef} className={`${secondButtonVisible ?  animation.spawnLeftAnimation:''}`}  style={{ 'animationDelay': `3s` ,'opacity':`0` ,'paddingTop':`1rem` }}>
                     <Button text='Ir a Unity' path={'/tutorial'} size ={'medium'} textSize={'medium'} />

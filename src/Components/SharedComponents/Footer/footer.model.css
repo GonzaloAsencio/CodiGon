@@ -9,8 +9,36 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.links-container > h2{
-   font-size: 1.2rem;
+.information{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
 }
+
+.footer-icon{
+    padding-right: 2rem;
+}
+
+.links-container > a{
+    padding: 1.2rem;
+    margin-left: 50%;
+   color: white;
+    margin: 0;
+    text-decoration: none;
+    span{
+      font-weight: bold;
+    }
+}
+.footer-icon-a{
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    color: white;
+ }
+
+
+

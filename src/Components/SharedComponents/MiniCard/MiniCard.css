@@ -1,0 +1,47 @@
+.miniCard{
+    display: none;
+    padding-left: 1rem;
+}
+
+.miniCard-container{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-items: center;
+    width: 33.33333333%;
+    border: 1px dotted rgba(178, 190, 195,1.0);
+
+}
+.miniCard-img > a > img {
+    width: 75px;
+    height: 75px;
+}
+.miniCard-txt{
+    height: 100%;
+    padding-left: 1rem;
+    font-size: 16px;
+    border-left: 1px dotted rgba(178, 190, 195,1.0);
+}
+
+.test-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.headline {
+    margin-left: 1rem;
+}
+
+.headline > h2{
+    display: inline-block;
+    border-bottom: 3px solid #0984e3;
+}
+
+@media screen and (min-width: 720px) {
+    .miniCard{
+        display: contents;
+    }
+}

@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import {useParams,Link} from "react-router-dom";
 import './PostPage.css';
 import {UserContext} from "../../UserContext";
+import Button from "../../SharedComponents/Button";
 
 
 export default function  PostPage()  {
@@ -18,11 +19,9 @@ export default function  PostPage()  {
       });
   }, []);
   
-  console.log(postInfo);
   if (!postInfo) return '';
 
   return (
-    <>
     <div className="post-container">
       <h2>{postInfo.title}</h2>
       <div className="post-summary">
@@ -42,7 +41,9 @@ export default function  PostPage()  {
         <img src={`http://localhost:4000/${postInfo.cover}`} alt=""/>
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
+      <div className="post-button">
+        <Button text='VER MAS TUTORIALES' path={'/tutorial'}  />
+      </div>
   </div>
-  </>
   );
 }

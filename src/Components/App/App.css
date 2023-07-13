@@ -17,6 +17,13 @@ body {
   font-size: 1rem;
 }
 
+@font-face {
+  font-family: logoText;
+  src: url('../../../public//Bonus\ Coffee.ttf');
+}
+.logoText{
+  font-family: logoText;
+}
 @media screen and (min-width: 720px) {
   body {
     font-size: 1.6rem;

@@ -6,6 +6,7 @@ import { faUnity} from "@fortawesome/free-brands-svg-icons";
 import { faCode} from "@fortawesome/free-solid-svg-icons"
 import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
 import {motion,AnimatePresence} from 'framer-motion';
+import MiniCard from "../MiniCard/index";
 import Articles from '../ArticleList/index';
 
 function Cards({search,language}){
@@ -58,6 +59,9 @@ return(
             }
         </AnimatePresence>
     </motion.div>
+    <div>
+        <MiniCard lists={result}/>
+    </div>
     <Articles title={'Artículos de Unity'} marker={faUnity} lists={posts.filter((item) => {
         return item.icon.toLowerCase().includes('unity');
     })}/>

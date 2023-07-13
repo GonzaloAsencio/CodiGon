@@ -31,25 +31,33 @@ function SocialMedia() {
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >
                   <div className='toolTip'>Twitter</div>
                   <div className='social-icon-conteiner'>
+                    <a href='https://twitter.com/SapoPlayer' style={{'color':`#0984e3`}}>
                       <FontAwesomeIcon className='iconn' icon={faTwitter}/>
+                    </a>
                   </div>
                 </div>
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >
                   <div className='toolTip'>LinkedIn</div>
                   <div className='social-icon-conteiner'>
+                      <a href='https://www.linkedin.com/in/gonzalo-asencio/' style={{'color':`#0984e3`}}>
                       <FontAwesomeIcon className='iconn' icon={faLinkedinIn}/>
+                      </a>
                   </div>
                 </div>
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >
                   <div className='toolTip'>GitHub</div>
                   <div className='social-icon-conteiner'>
-                      <FontAwesomeIcon className='iconn' icon={faGithub}/>
+                      <a href='https://github.com/Codi-Gon' style={{'color':`#2d3436`}}>
+                        <FontAwesomeIcon  className='iconn' icon={faGithub}/>
+                      </a>
                   </div>
                 </div>
                 <div ref={iconRef} className= {`icon ${myIconIsVisible ? animations.iconJump :''}`} >
                   <div className='toolTip'>PlayStore</div>
                   <div className='social-icon-conteiner'>
+                      <a href='https://play.google.com/store/apps/developer?id=VissArg&hl=es_419' style={{'color':`#2d3436`}}>
                       <FontAwesomeIcon className='iconn' icon={faGooglePlay }/>
+                      </a>
                   </div>
                 </div>
               </div>

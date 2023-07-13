@@ -26,7 +26,7 @@ export default function CreatePost() {
     data.set('color','');
     data.set('icon',icon);
     ev.preventDefault();
-    
+
     const response = await fetch('http://localhost:4000/post', {
       method: 'POST',
       body: data,
@@ -42,18 +42,18 @@ export default function CreatePost() {
   }
 
   var toolbarOptions = [
-    ['bold', 'italic', 'underline', 'strike'],        
+    ['bold', 'italic', 'underline', 'strike'],
     ['blockquote', 'code-block'],
-    [{ 'header': 1 }, { 'header': 2 }],              
+    [{ 'header': 1 }, { 'header': 2 }],
     [{ 'list': 'ordered'}, { 'list': 'bullet' }],
     [{ 'script': 'sub'}, { 'script': 'super' }],
-    [{ 'indent': '-1'}, { 'indent': '+1' }],        
+    [{ 'indent': '-1'}, { 'indent': '+1' }],
     [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    [{ 'color': [] }, { 'background': [] }],        
+    [{ 'color': [] }, { 'background': [] }],
     [{ 'font': [] }],
 	  ['link', 'image','video'],
     [{ 'align': [] }],
-    ['clean']                                      
+    ['clean']
   ];
 
   const module = {
@@ -69,29 +69,35 @@ export default function CreatePost() {
 
 
   return (
+  <div className='post-container'>
+     <h2>Crea tu Artículo</h2>
     <form className="post-form" onSubmit={createNewPost}>
       <div className="post-inputs">
       <input type="title"
-             placeholder={'Title'}
+             placeholder={'Título'}
              value={title}
              onChange={ev => setTitle(ev.target.value)} />
       <input type="summary"
-             placeholder={'Summary'}
+             placeholder={'Subtítulo'}
              value={summary}
              onChange={ev => setSummary(ev.target.value)} />
       <div className="post-selectors">
-      <input type="file"
-             onChange={ev => setFiles(ev.target.files)} />
-      <select value={icon} onChange={handleChangeLanguague}>
-          <option value="Unity">Unity</option>
-          <option value="Csharp">C#</option>
-      </select>
+        <input type="file"
+              onChange={ev => setFiles(ev.target.files)} />
+          <div className='select-box'>
+            <p>Lenguaje</p>
+            <select value={icon} onChange={handleChangeLanguague}>
+                <option value="Unity">Unity</option>
+                <option value="Csharp">C#</option>
+            </select>
+          </div>
       </div>
     </div>
-      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats} style={{'marginBotton':`1rem`}}/>
+      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats} cols="40" rows="5" style={{'marginBotton':`1rem`}}/>
       <div style={{'paddingTop':`1rem`}}>
-        <Button text='Create Post' size={'medium'} />
+        <Button text='Create Post' />
       </div>
     </form>
+  </div>
   );
 }

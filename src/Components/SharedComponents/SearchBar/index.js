@@ -12,6 +12,7 @@ const SearchBar = ({type, placeholder,onChange}) => {
   const searchInput = useRef();
   const [clicked, setClicked] = useState(false);
   
+// eslint-disable-next-line react-hooks/exhaustive-deps
 const handleClick = () => {
     setClicked(!clicked);
 }
@@ -25,7 +26,6 @@ useEffect(() => {
         searchBox.current.classList.remove('active');
         searchBtn.current.classList.remove('active');
         searchInput.current.classList.remove('active');
-        searchInput.current.value = '';
       };
 }, [clicked, handleClick]);
 

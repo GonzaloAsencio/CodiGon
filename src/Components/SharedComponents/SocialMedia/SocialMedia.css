@@ -171,7 +171,7 @@
 }
 
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1140px) {
     .social-media-image-conteiner{
         display: flex;
     }

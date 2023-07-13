@@ -10,11 +10,12 @@
     align-items: center;
     justify-content: space-between;
 }
-.nav-style > h2{
+.nav-style > a{
     color: white;
     font-weight: 400;
     padding-left: 1rem;
     margin: 0;
+    text-decoration: none;
     span{
       font-weight: bold;
     }
