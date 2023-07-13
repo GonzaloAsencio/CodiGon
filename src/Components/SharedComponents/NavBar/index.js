@@ -1,4 +1,4 @@
-import {useEffect,useContext,useState} from 'react';
+import {useEffect,useContext,useState,useRef} from 'react';
 import { Link, useLocation} from 'react-router-dom';
 import './NavBar.css';
 import BurguerButton from './burgerButton';
@@ -11,6 +11,7 @@ export const Navbar = ({props }) => {
   const [clicked, setClicked] = useState(false);
   const {setUserInfo,userInfo} = useContext(UserContext);
   const [searchText,setSeach] = useState('');
+  const ref= useRef();
 
   useEffect(() => {
     props.setResponse(searchText);
@@ -44,8 +45,8 @@ useEffect(() => {
 
   return (
     <>
-      <nav className='nav-style'>
-        <h2>Logo</h2>
+      <nav className='nav-style' id ="nav-bar" ref={ref}>
+        <a href={'/'}className='logoText'> {'{CodiGon}'} </a>
         <div className={`links ${clicked ? 'active' : ''}`}>
           {username && pathname !== '/tutorial' && (
               <>
@@ -60,8 +61,8 @@ useEffect(() => {
               <div className='nav-container' onClick={() => setClicked(false)}>
                 <a className='nav-links nav-links-active' href="#first-section">Inicio</a>
                 <a className='nav-links'  href="#first-section">Tutoriales</a>
-                <a className='nav-links'  href="#second-section">Contacto</a>
-                <a className='nav-links'  href="#third-section">Mis Redes</a>
+                <a className='nav-links'  href="#contact-section">Contacto</a>
+                <a className='nav-links'  href="#socialMedia-section">Mis Redes</a>
               </div>
             )}
         </div>

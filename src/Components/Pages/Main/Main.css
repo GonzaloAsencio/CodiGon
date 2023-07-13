@@ -37,7 +37,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   position: absolute;
   z-index: 10;
   width: 4em;
@@ -99,5 +99,10 @@ animation-iteration-count: infinite;
   .more-tutorials{
     display: none;
   }
+
+  .change-page-button{
+    margin-bottom: 5rem;
+  }
+  
 }
 

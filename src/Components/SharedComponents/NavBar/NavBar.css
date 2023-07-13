@@ -10,11 +10,12 @@
     align-items: center;
     justify-content: space-between;
 }
-.nav-style > h2{
+.nav-style > a{
     color: white;
     font-weight: 400;
     padding-left: 1rem;
     margin: 0;
+    text-decoration: none;
     span{
       font-weight: bold;
     }
@@ -26,14 +27,6 @@
     text-decoration: none;
     margin-right: 1.5rem;
     transition: 0.3s ease-in-out;
-}
-.nav-links:hover{
-    color: white;
-    font-size: 2.5rem;
-    border-color: #0984e3;
-    border-style: solid;
-    border-bottom-color: #fdcb6e;
-    text-decoration: none;
 }
 .links{
     display: none;

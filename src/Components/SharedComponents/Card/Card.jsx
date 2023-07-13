@@ -14,7 +14,7 @@ const TextAreaStyle = styled(motion.div)`
         border-top: 5px solid ${(props) => props.color};
     }
     .card-text-conteiner > h2{
-        color:#2d3436;
+        color:rgba(45, 52, 54,1.0);
     }
     .card:hover{
     transition: all 0.3s linear;

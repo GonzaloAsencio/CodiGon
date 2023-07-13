@@ -6,6 +6,7 @@ import { faUnity} from "@fortawesome/free-brands-svg-icons";
 import { faCode} from "@fortawesome/free-solid-svg-icons"
 import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
 import {motion,AnimatePresence} from 'framer-motion';
+import MiniCard from "../MiniCard/index";
 import Articles from '../ArticleList/index';
 
 function Cards({search,language}){
@@ -53,11 +54,14 @@ return(
                 )):
                 <motion.div initial={{'opacity':0}} animate={{'opacity':1}} transition={{'delay':0.2}} className="cards-error">
                     <img src={errorImage} alt="" />
-                    <p>POST NO ENCONTRADO</p>
+                    <p>ARTÍCULO NO ENCONTRADO.</p>
                 </motion.div>
             }
         </AnimatePresence>
     </motion.div>
+    <div>
+        <MiniCard lists={result}/>
+    </div>
     <Articles title={'Artículos de Unity'} marker={faUnity} lists={posts.filter((item) => {
         return item.icon.toLowerCase().includes('unity');
     })}/>

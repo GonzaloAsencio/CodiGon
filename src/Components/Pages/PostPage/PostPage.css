@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&family=Secular+One&display=swap');
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-h2{
-  font-family: 'Secular One', sans-serif;
-}
-p{
-  font-family: 'Questrial', sans-serif;
-}
-a{
-  font-family: 'Questrial', sans-serif;
-}
-button{
-  font-family: 'Archivo Black', sans-serif;
-}
-body {
-  font-size: 2.6rem;
-}
 .post-container{
     display: flex;
     flex-direction: column;
@@ -26,7 +7,9 @@ body {
     align-items: center;
     text-align: center;
     margin: 0;
-    padding: 0 120px;
+}
+.h2{
+  padding-bottom: 0px;
 }
 .post-summary{
   color: #636e72;
@@ -34,6 +17,28 @@ body {
 .post-image{
   padding: 20px 0;
 }
+.post-image > img{
+  width: 350px;
+}
 .author{
   color: #b2bec3;
+}
+.post-button{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width: 720px) {
+  .post-image > img{
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1140px) {
+  .post-container{
+    padding: 0 120px;
+}
+
 }
