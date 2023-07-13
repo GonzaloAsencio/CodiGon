@@ -28,6 +28,10 @@ padding-bottom:1rem;
     padding-bottom:1rem;
     list-style-type: none;
 }
+.article-list > p {
+    padding-left:1rem;
+
+}
  .article-list > div > a{
     text-decoration: none;
  }
@@ -54,7 +58,7 @@ return (
                     <FontAwesomeIcon icon={marker} className='marker-icon' />
                     <a href={`tutorial/post/${post._id}`} id={`${post._id}`}> {post.title}</a>
                 </div>
-                )) : <p>No se escontró ningún articulo</p>
+                )) : <p>No se escontró ningún articulo.</p>
             }
             </ul>
         </div>

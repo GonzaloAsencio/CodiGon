@@ -23,7 +23,7 @@
     border-left: 1px dotted rgba(178, 190, 195,1.0);
 }
 
-.test-div{
+.miniCard-div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

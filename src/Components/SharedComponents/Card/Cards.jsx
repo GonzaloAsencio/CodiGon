@@ -54,7 +54,7 @@ return(
                 )):
                 <motion.div initial={{'opacity':0}} animate={{'opacity':1}} transition={{'delay':0.2}} className="cards-error">
                     <img src={errorImage} alt="" />
-                    <p>POST NO ENCONTRADO</p>
+                    <p>ARTÍCULO NO ENCONTRADO.</p>
                 </motion.div>
             }
         </AnimatePresence>

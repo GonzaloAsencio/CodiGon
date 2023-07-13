@@ -1,5 +1,5 @@
 import React,{lazy,Suspense, useState} from 'react';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route,Navigate} from 'react-router-dom';
 import { UserContextProvider } from '../UserContext';
 import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
@@ -18,11 +18,12 @@ function App() {
 
   return (
     <UserContextProvider>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className='loading'>Loading...</div>}>
       <Header setResponse={setResponse}/>
         <Routes>
+          <Route path="/*" element={<Navigate to="/" />} />
           <Route path='/' exact Component={MainLayout}/>
-          <Route  
+          <Route
           forceRefresh={true}
           path='/tutorial'
           element= {<TutorialsLayout searchText={response}/>}
@@ -38,6 +39,6 @@ function App() {
   </UserContextProvider>
   );
 }
-  /*<Route path="/*" element={<Navigate to="/" />} />*/
+
 
 export default App;

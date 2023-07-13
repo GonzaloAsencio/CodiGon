@@ -16,7 +16,13 @@ button{
 body {
   font-size: 1rem;
 }
-
+.loadaing{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
 @font-face {
   font-family: logoText;
   src: url('../../../public//Bonus\ Coffee.ttf');

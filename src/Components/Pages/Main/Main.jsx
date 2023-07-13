@@ -13,7 +13,7 @@ function Main() {
       <section className='slider-conteiner'>
         <div className='slider-text'>
           <h2>¿ESTAS PENSANDO EN EMPEZAR A DESARROLLAR VIDEOJUEGOS?</h2>
-          <p>Entonces te recomiendo que mires los tutoriales que hice para mejorar tu experiencia de aprendizaje.</p>
+          <p>Entonces te recomiendo que mires los tutoriales que hice para mejorar tu aprendizaje.</p>
         </div>
         <Button text='VER TUTORIALES' path={'/tutorial'} size ={'big'} textSize={'medium'}/>
           <a href ="#first-section" className='change-page-button'>

@@ -9,7 +9,7 @@ export const MiniCard = ({lists}) => {
         <div className='headline'>
             <h2>Artículos Recientes</h2>
         </div>
-        <div className="test-div">
+        <div className="miniCard-div">
         {(lists.slice((Object.keys(lists).length -6),(Object.keys(lists).length))).map(post => (
             <div className="miniCard-container">
                 <div className="miniCard-img">
