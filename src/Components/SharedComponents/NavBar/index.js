@@ -20,7 +20,7 @@ export const Navbar = ({props }) => {
   const handleClick = (state) => {
     setClicked(!clicked)
   }
-
+  const username = userInfo?.username;
 useEffect(() => {
     if(username){
       fetch('http://localhost:4000/profile', {
@@ -31,10 +31,9 @@ useEffect(() => {
         });
       });
     }
-  // eslint-disable-next-line no-use-before-define
-  }, [setUserInfo, username]);
 
-  const username = userInfo?.username;
+  }, []);
+
 
   function logout() {
     fetch('http://localhost:4000/logout', {
