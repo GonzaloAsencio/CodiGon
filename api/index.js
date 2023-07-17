@@ -14,7 +14,7 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
-app.use(cors({credentials:true,origin:'http://localhost:3000'}));
+app.use(cors({credentials:true,origin:'https://codigon.onrender.com'}));
 app.use(express.json());
 app.use(cookieParser());
 
