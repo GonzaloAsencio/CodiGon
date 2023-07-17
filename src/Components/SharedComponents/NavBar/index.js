@@ -31,7 +31,8 @@ useEffect(() => {
         });
       });
     }
-  }, []);
+  // eslint-disable-next-line no-use-before-define
+  }, [setUserInfo, username]);
 
   const username = userInfo?.username;
 

@@ -17,7 +17,7 @@ export default function  PostPage()  {
           setPostInfo(postInfo);
         });
       });
-  }, []);
+  }, [id]);
   
   if (!postInfo) return '';
 
