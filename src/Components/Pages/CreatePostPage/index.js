@@ -1,5 +1,6 @@
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import './EditorPost.css';
 import {useState} from 'react';
 import {Navigate} from 'react-router-dom';
@@ -41,33 +42,6 @@ export default function CreatePost() {
     return <Navigate to={'/'} />
   }
 
-  var toolbarOptions = [
-    ['bold', 'italic', 'underline', 'strike'],
-    ['blockquote', 'code-block'],
-    [{ 'header': 1 }, { 'header': 2 }],
-    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-    [{ 'script': 'sub'}, { 'script': 'super' }],
-    [{ 'indent': '-1'}, { 'indent': '+1' }],
-    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    [{ 'color': [] }, { 'background': [] }],
-    [{ 'font': [] }],
-	  ['link', 'image','video'],
-    [{ 'align': [] }],
-    ['clean']
-  ];
-
-  const module = {
-    toolbar:toolbarOptions,
-  };
-
-  const formats = [
-    'header',
-    'bold', 'italic', 'underline', 'strike', 'blockquote',
-    'list', 'bullet', 'indent',
-    'link', 'image'
-  ];
-
-
   return (
   <div className='post-container'>
      <h2>Crea tu Artículo</h2>
@@ -93,7 +67,8 @@ export default function CreatePost() {
           </div>
       </div>
     </div>
-      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={module} formats={formats} cols="40" rows="5" style={{'marginBotton':`1rem`}}/>
+      <EditorToolbar/>
+      <ReactQuill theme='snow' value={content} onChange={newValue => setContent(newValue)} modules={modules} formats={formats} cols="40" rows="5" style={{'marginBotton':`1rem`, 'width':'100%'}}/>
       <div style={{'paddingTop':`1rem`}}>
         <Button text='Create Post' />
       </div>
