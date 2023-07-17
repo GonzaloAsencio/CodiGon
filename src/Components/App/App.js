@@ -5,7 +5,7 @@ import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
 import './App.css';
 
-const RegisterLayout = lazy(() => import('../Pages/ReginsterPage/index'));
+/*const RegisterLayout = lazy(() => import('../Pages/ReginsterPage/index'));*/
 const LoginLayout = lazy(() => import('../Pages/LoginPage/index'));
 const MainLayout = lazy(() => import('../Pages/Main/Main'));
 const TutorialsLayout = lazy(() => import('../Pages/TutorialPage/Tutorial'));
@@ -28,7 +28,6 @@ function App() {
           path='/tutorial'
           element= {<TutorialsLayout searchText={response}/>}
            />
-          <Route path='/register' exact Component={RegisterLayout}/>
           <Route path='/login' exact Component={LoginLayout}/>
           <Route path='/create' exact Component={CreatePostLayout}/>
           <Route path='/tutorial/post/:id' exact Component={PostLayout} />
@@ -40,5 +39,6 @@ function App() {
   );
 }
 
+   /*<Route path='/register' exact Component={RegisterLayout}/>*/
 
 export default App;
