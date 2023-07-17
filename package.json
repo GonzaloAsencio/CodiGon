@@ -37,10 +37,7 @@
     "predeploy": "npm run build",
     "dev":"nodemon index.js",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "npm i",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "npm i"
   },
   "eslintConfig": {
     "extends": [
