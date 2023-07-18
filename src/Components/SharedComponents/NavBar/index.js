@@ -23,7 +23,7 @@ export const Navbar = ({props }) => {
   const username = userInfo?.username;
 useEffect(() => {
     if(username){
-      fetch('https://codigon.onrender.com/profile', {
+      fetch('http://localhost:3000/profile', {
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
@@ -36,7 +36,7 @@ useEffect(() => {
 
 
   function logout() {
-    fetch('https://codigon.onrender.com/logout', {
+    fetch('http://localhost:3000/logout', {
       credentials: 'include',
       method: 'POST',
     });

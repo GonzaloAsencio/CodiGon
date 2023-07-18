@@ -28,7 +28,7 @@ export default function CreatePost() {
     data.set('icon',icon);
     ev.preventDefault();
 
-    const response = await fetch('https://codigon.onrender.com/post', {
+    const response = await fetch('http://localhost:3000/post', {
       method: 'POST',
       body: data,
       credentials: 'include',
