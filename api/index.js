@@ -18,6 +18,7 @@ app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 
+mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://Gonzaviss:CODIgon2023@cluster0.k5xxe18.mongodb.net/?retryWrites=true&w=majority');
 
 app.post('/register',async (req,res) => {
