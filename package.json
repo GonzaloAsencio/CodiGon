@@ -11,7 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^8.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -61,7 +61,7 @@
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",
-    "react-quill": "^2.0.0",
+    "react-quill": "^0.0.2",
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.10.0",
     "resolve": "^1.20.0",
@@ -83,7 +83,7 @@
     "predeploy": "npm run build",
     "dev": "nodemon index.js",
     "deploy": "gh-pages -d build",
-    "start": "node scripts/start.js",
+    "start": "node index.js",
     "build": "npm i",
     "test": "node scripts/test.js"
   },
@@ -107,7 +107,7 @@
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^5.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.1"
   },
   "jest": {
     "roots": [
