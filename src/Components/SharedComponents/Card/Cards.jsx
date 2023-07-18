@@ -14,7 +14,7 @@ function Cards({search,language}){
     const [posts,setPosts] = useState([]);
 
     useEffect(() => {
-    fetch('https://codigon.onrender.com/post').then(response => {
+    fetch('http://localhost:3000/post').then(response => {
         response.json().then(posts => {
         setPosts(posts);
         });
