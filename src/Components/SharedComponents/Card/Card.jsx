@@ -48,7 +48,7 @@ return (
                     <img src={icon === 'Unity' ? unityIcon : csharpIncon } alt=''/>
             </div>
             <div className='card-image'>
-                <img src={'http://localhost:4000/'+cover} alt=''/>
+                <img src={'https://codigon-backend.onrender.com/'+cover} alt=''/>
             </div>
             <div className='card-text-conteiner'>
                 <h2 className='card-tittle'>{title}</h2>
