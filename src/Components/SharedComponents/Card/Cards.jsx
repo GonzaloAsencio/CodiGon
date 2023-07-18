@@ -14,7 +14,7 @@ function Cards({search,language}){
     const [posts,setPosts] = useState([]);
 
     useEffect(() => {
-    fetch('https://codigon.netlify.app/post').then(response => {
+    fetch('https://codigon-backend.onrender.com/post').then(response => {
         response.json().then(posts => {
         setPosts(posts);
         });
