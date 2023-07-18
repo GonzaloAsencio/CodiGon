@@ -23,7 +23,7 @@ export const Navbar = ({props }) => {
   const username = userInfo?.username;
 useEffect(() => {
     if(username){
-      fetch('http://localhost:3000/profile', {
+      fetch('http://localhost:4000/profile', {
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
@@ -32,11 +32,12 @@ useEffect(() => {
       });
     }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
   function logout() {
-    fetch('http://localhost:3000/logout', {
+    fetch('http://localhost:4000/logout', {
       credentials: 'include',
       method: 'POST',
     });
