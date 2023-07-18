@@ -14,10 +14,11 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 
+const API = process.env.REACT_APP_API;
 const url = process.env.REACT_AP_MONGODB;
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
-app.use(cors({credentials:true,origin:"http://localhost:3000"}));
+app.use(cors({credentials:true,origin: API}));
 app.use(express.json());
 app.use(cookieParser());
 
