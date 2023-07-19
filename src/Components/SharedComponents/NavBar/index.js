@@ -23,7 +23,7 @@ export const Navbar = ({props }) => {
   const username = userInfo?.username;
 useEffect(() => {
     if(username){
-      fetch('http://localhost:4000/profile', {
+      fetch(`${process.env.REACT_APP_PAGE}/profile`, {
         credentials: 'include',
       }).then(response => {
         response.json().then(userInfo => {
@@ -37,7 +37,7 @@ useEffect(() => {
 
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch(`${process.env.REACT_APP_PAGE}/logout`, {
       credentials: 'include',
       method: 'POST',
     });

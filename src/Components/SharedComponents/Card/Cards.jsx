@@ -14,7 +14,7 @@ function Cards({search,language}){
     const [posts,setPosts] = useState([]);
 
     useEffect(() => {
-    fetch('http://localhost:4000/post').then(response => {
+    fetch(`${process.env.REACT_APP_PAGE}/post`).then(response => {
         response.json().then(posts => {
         setPosts(posts);
         });
