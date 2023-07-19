@@ -2,7 +2,6 @@
   "homepage": "",
   "name": "radiont",
   "version": "0.1.0",
-  "engines":{"node": "20.x"},
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -41,6 +40,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "nodemon index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
