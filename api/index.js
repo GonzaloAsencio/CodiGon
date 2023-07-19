@@ -16,6 +16,7 @@ const salt = bcrypt.genSaltSync(10);
 
 const API = process.env.REACT_APP_API;
 const url = process.env.REACT_AP_MONGODB;
+const PORT = process.env.REACT_APP_PORT;
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(cors({credentials:true,origin: API}));
@@ -135,6 +136,6 @@ app.get('/post/:id', async (req, res) => {
 })
 
 
-app.listen(4000);
+app.listen(PORT);
 
 

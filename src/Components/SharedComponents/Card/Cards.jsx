@@ -26,8 +26,6 @@ function Cards({search,language}){
     let result = posts.filter((item) => {
         return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
     });
-
-
     CalculateColor();
 
     function CalculateColor(){
