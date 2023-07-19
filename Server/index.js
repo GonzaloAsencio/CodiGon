@@ -15,7 +15,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = process.env.REACT_APP_SECRET;
-const API = process.env.REACT_APP_API;
+const API = ['http://localhost:3000', 'https://codigon-backend.onrender.com','https://codigon.onrender.com/','https://codigon.netlify.app'];
 const url = process.env.REACT_AP_MONGODB;
 const PORT = process.env.REACT_APP_PORT;
 
