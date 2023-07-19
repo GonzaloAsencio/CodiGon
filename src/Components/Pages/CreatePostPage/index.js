@@ -28,7 +28,7 @@ export default function CreatePost() {
     data.set('icon',icon);
     ev.preventDefault();
 
-    const response = await fetch('http://localhost:4000', {
+    const response = await fetch(process.env.REACT_APP_PAGE, {
       method: 'POST',
       body: data,
       credentials: 'include',
