@@ -136,6 +136,6 @@ app.get('/post/:id', async (req, res) => {
 })
 
 
-app.listen(PORT);
+app.listen(PORT, () => ('api running'));
 
 
