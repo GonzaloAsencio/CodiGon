@@ -13,7 +13,7 @@ export default function LoginPage(){
 
     async function Login(ev){
         ev.preventDefault();
-       const response = await fetch (process.env.REACT_APP_PAGE,{
+       const response = await fetch (`${process.env.REACT_APP_PAGE}/login`,{
             method:'POST',
             body:JSON.stringify({username,password}),
             headers: {'Content-Type':'application/json'},
@@ -21,6 +21,7 @@ export default function LoginPage(){
         });
         if (response.ok){
             response.json().then(userInfo => {
+                console.log(userInfo);
                 setUserInfo(userInfo);
                 setRedirect(true);
               });
