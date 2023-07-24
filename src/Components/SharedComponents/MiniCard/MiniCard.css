@@ -40,6 +40,23 @@
     border-bottom: 3px solid #0984e3;
 }
 
+.article-loader{
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #74b9ff;
+    width: 100px;
+    height: 100px;
+    animation: spinner 1.5s linear infinite;
+  }
+
+  @keyframes spinner {
+
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 @media screen and (min-width: 720px) {
     .miniCard{
         display: contents;

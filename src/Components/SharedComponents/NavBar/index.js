@@ -52,7 +52,7 @@ useEffect(() => {
           {username && pathname !== '/tutorial' && (
               <>
                   <a className='nav-links' onClick={handleClick} href="#first-section">Home</a>
-                  <a className='nav-links' onClick={handleClick} href="#h">Tutorial</a>
+                  <Link className='nav-links' onClick={handleClick} to="/tutorial">Tutorial</Link>
                   <Link className='nav-links'  onClick={handleClick}  to="/create">CrearPost</Link>
                   <a className='nav-links'  onClick={handleClick} href="#h">Contact</a>
                   <a className='nav-links'  onClick={logout} href="#h">Log Out</a>

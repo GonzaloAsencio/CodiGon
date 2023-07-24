@@ -58,7 +58,7 @@ return (
                     <FontAwesomeIcon icon={marker} className='marker-icon' />
                     <a href={`tutorial/post/${post._id}`} id={`${post._id}`}> {post.title}</a>
                 </div>
-                )) : <p>No se escontró ningún articulo.</p>
+                )) : <p>No se escontró ningún artículo.</p>
             }
             </ul>
         </div>

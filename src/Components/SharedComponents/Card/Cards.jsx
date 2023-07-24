@@ -8,23 +8,25 @@ import errorImage from  '../../../assets/Image/Main/QuestionGrey.png';
 import {motion,AnimatePresence} from 'framer-motion';
 import MiniCard from "../MiniCard/index";
 import Articles from '../ArticleList/index';
+import Spinner from "../Spinner";
 
 function Cards({search,language}){
-
+    const [showSpinner,setSpinner] = useState(true);
     const [posts,setPosts] = useState([]);
 
     useEffect(() => {
     fetch(`${process.env.REACT_APP_PAGE}/post`).then(response => {
         response.json().then(posts => {
+        setSpinner(false);
         setPosts(posts);
         });
     }).catch(error => {
-        console.log('Error getting fake data: ' + error);
+        alert('Error getting fake data: ' + error);
         });
     }, []);
 
     let result = posts.filter((item) => {
-        return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search);
+        return language === '' &&  search.toLowerCase() === '' ? item : item.icon.toLowerCase().includes(language) &&  item.title.toLowerCase().includes(search.toLowerCase());
     });
     CalculateColor();
 
@@ -44,7 +46,9 @@ return(
     <>
     <motion.div layout initial={{'opacity':0}} animate={{'opacity':1}}className="cards">
         <AnimatePresence>
-            {result.length > 0 ?
+            {
+                showSpinner ? <Spinner/> :
+            (result.length > 0 ?
                 (result).map(post => (
                     <div className="cards-conteiner" key={post._id}>
                         <Card {...post}/>
@@ -54,7 +58,8 @@ return(
                     <img src={errorImage} alt="" />
                     <p>ARTÍCULO NO ENCONTRADO.</p>
                 </motion.div>
-            }
+            )
+        }
         </AnimatePresence>
     </motion.div>
     <div>
