@@ -9,7 +9,7 @@ export default function  PostPage()  {
   const [postInfo,setPostInfo] = useState(null);
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();
-  
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_PAGE}/post/${id}`)
       .then(response => {
@@ -18,7 +18,7 @@ export default function  PostPage()  {
         });
       });
   }, [id]);
-  
+
   if (!postInfo) return '';
 
   return (
@@ -31,8 +31,7 @@ export default function  PostPage()  {
       {userInfo.id === postInfo.author._id && (
         <div className="edit-row">
           <Link className="edit-btn" to={`/edit/${postInfo._id}`}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"></svg>
             Edit this post
           </Link>
         </div>

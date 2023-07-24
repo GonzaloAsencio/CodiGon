@@ -21,12 +21,11 @@ export default function LoginPage(){
         });
         if (response.ok){
             response.json().then(userInfo => {
-                console.log(userInfo);
                 setUserInfo(userInfo);
                 setRedirect(true);
               });
         }else {
-            alert('wrongCredentials');
+            alert('wrongCredentials login page');
         }
     }
         if(redirect){

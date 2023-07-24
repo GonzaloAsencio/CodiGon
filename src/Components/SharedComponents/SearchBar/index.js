@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass,faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
-//Limpiar el input cuando cancelo
 const SearchBar = ({type, placeholder,onChange}) => {
   
   const searchBtn = useRef();

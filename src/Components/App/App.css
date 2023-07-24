@@ -22,6 +22,7 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
+  background:radial-gradient(#9b59b6, #8e44ad);
 }
 @font-face {
   font-family: logoText;

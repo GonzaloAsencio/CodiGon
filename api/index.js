@@ -7,19 +7,18 @@ const Post = require('./models/post');
 const bcrypt = require('bcrypt');
 const app = express();
 const jwt = require('jsonwebtoken');
-const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+const secret = process.env.REACT_APP_SECRET;
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 
-const API = ['http://localhost:3000', 'https://codigon-backend.onrender.com','https://codigon.onrender.com/','https://codigon.netlify.app'];
 const url = process.env.REACT_AP_MONGODB;
 const PORT = process.env.REACT_APP_PORT;
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
-app.use(cors({credentials:true,origin: API}));
+app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 

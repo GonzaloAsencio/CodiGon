@@ -3,6 +3,7 @@ import { Routes, Route,Navigate} from 'react-router-dom';
 import { UserContextProvider } from '../UserContext';
 import Header from '../SharedComponents/Header/Header';
 import Footer from '../SharedComponents/Footer/index';
+import Loadder from '../SharedComponents/Loading/index';
 import './App.css';
 
 /*const RegisterLayout = lazy(() => import('../Pages/ReginsterPage/index'));*/
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <UserContextProvider>
-    <Suspense fallback={<div className='loading'>Loading...</div>}>
+    <Suspense fallback={<Loadder/>}>
       <Header setResponse={setResponse}/>
         <Routes>
           <Route path="/*" element={<Navigate to="/" />} />
