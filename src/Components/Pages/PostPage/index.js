@@ -13,6 +13,8 @@ export default function  PostPage()  {
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_PAGE}/post/${id}`, {
+      method: 'GET',
+      headers: new Headers({ 'Content-type': 'application/json'}),
       mode: 'no-cors'
     })
       .then(response => {
