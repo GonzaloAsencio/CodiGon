@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import csharpIncon from '../../../assets/Image/Icons/csharpicon.png';
@@ -40,10 +41,9 @@ const TextAreaStyle = styled(motion.div)`
 
 function Card({_id,title, summary,cover,color,icon}) {
     const navigate = useNavigate()
-
 return (
         <TextAreaStyle layout initial={{'opacity':0, 'scale':0}} animate={{'opacity':1, 'scale':1}} exit={{'opacity':0, 'scale':0 }} transition={{'duration':0.2}} className='card' color={color} >
-           <button onClick={()=> navigate(`/tutorial/post/${_id}`)}>
+        <a onClick={()=> navigate(`/tutorial/post/${_id}`)}>
             <div className='card-body'>
                 <div className='card-icon-image'>
                         <img src={icon === 'Unity' ? unityIcon : csharpIncon } alt=''/>
@@ -60,7 +60,7 @@ return (
                     </p>
                 </div>
             </div>
-            </button>
+        </a>
         </TextAreaStyle>
 );
 }
