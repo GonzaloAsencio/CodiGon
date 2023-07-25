@@ -11,7 +11,7 @@ export default function  PostPage()  {
   const {id} = useParams();
 
   useEffect(() => {
-    fetch(`https://codigon-backend.onrender.com/post/${id}`)
+    fetch(`${process.env.REACT_APP_PAGE}/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
