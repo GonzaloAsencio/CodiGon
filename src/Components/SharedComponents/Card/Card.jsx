@@ -2,6 +2,7 @@
 import React from 'react';
 import csharpIncon from '../../../assets/Image/Icons/csharpicon.png';
 import unityIcon from '../../../assets/Image/Icons/unityIcon.png';
+import { useNavigate } from "react-router-dom";
 import './Card.css';
 import {motion} from 'framer-motion';
 import styled from 'styled-components';
@@ -38,30 +39,29 @@ const TextAreaStyle = styled(motion.div)`
 `;
 
 function Card({_id,title, summary,cover,color,icon}) {
-
+    const navigate = useNavigate()
 
 return (
-    <TextAreaStyle layout initial={{'opacity':0, 'scale':0}} animate={{'opacity':1, 'scale':1}} exit={{'opacity':0, 'scale':0 }} transition={{'duration':0.2}} className='card' color={color} >
-       <a href={`/tutorial/post/${_id}`}>
-        <div className='card-body'>
-            <div className='card-icon-image'>
-                    <img src={icon === 'Unity' ? unityIcon : csharpIncon } alt=''/>
+        <TextAreaStyle layout initial={{'opacity':0, 'scale':0}} animate={{'opacity':1, 'scale':1}} exit={{'opacity':0, 'scale':0 }} transition={{'duration':0.2}} className='card' color={color} >
+           <button onClick={()=> navigate(`/tutorial/post/${_id}`)}>
+            <div className='card-body'>
+                <div className='card-icon-image'>
+                        <img src={icon === 'Unity' ? unityIcon : csharpIncon } alt=''/>
+                </div>
+                <div className='card-image'>
+                    <img src={`${process.env.REACT_APP_PAGE}/`+cover} alt=''/>
+                </div>
+                <div className='card-text-conteiner'>
+                    <h2 className='card-tittle'>{title}</h2>
+                    <p className='card-text text-secondary'>
+                    { summary ? summary :
+                    'El creador de esta página se olvidó de agregar contenido en esta sección. '
+                    }
+                    </p>
+                </div>
             </div>
-            <div className='card-image'>
-                <img src={`${process.env.REACT_APP_PAGE}/`+cover} alt=''/>
-            </div>
-            <div className='card-text-conteiner'>
-                <h2 className='card-tittle'>{title}</h2>
-                <p className='card-text text-secondary'>
-                { summary ? summary :
-                'El creador de esta página se olvidó de agregar contenido en esta sección. '
-                }
-                </p>
-            </div>
-        </div>
-        </a>
-    </TextAreaStyle>
-
+            </button>
+        </TextAreaStyle>
 );
 }
 export default Card;
