@@ -38,7 +38,6 @@ export default function  PostPage()  {
         </div>
       )}
       <div className="post-image">
-        <img src={`${process.env.REACT_APP_PAGE}/${postInfo.cover}`} alt=""/>
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
       <div className="post-button">
