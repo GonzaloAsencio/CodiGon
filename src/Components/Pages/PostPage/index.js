@@ -2,7 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import {useParams,Link} from "react-router-dom";
 import './PostPage.css';
 import {UserContext} from "../../UserContext";
-import Button from "../../SharedComponents/Button";
+import Button from "../../SharedComponents/Button/index";
 
 
 export default function  PostPage()  {
