@@ -3,6 +3,7 @@ import {useParams,Link} from "react-router-dom";
 import './PostPage.css';
 import {UserContext} from "../../UserContext";
 import Button from "../../SharedComponents/Button/index";
+import LoadingPage from '../../SharedComponents/Loading/index';
 
 
 export default function  PostPage()  {
@@ -20,7 +21,7 @@ export default function  PostPage()  {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (!postInfo) return '';
+  if (!postInfo) return <LoadingPage/>;
 
   return (
     <div className="post-container">

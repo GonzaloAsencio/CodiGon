@@ -64,6 +64,7 @@ useEffect(() => {
                 <a className='nav-links'  href="#first-section">Tutoriales</a>
                 <a className='nav-links'  href="#contact-section">Contacto</a>
                 <a className='nav-links'  href="#socialMedia-section">Mis Redes</a>
+                <Link className='nav-links'  onClick={handleClick}  to="/login">Login</Link>
               </div>
             )}
         </div>
