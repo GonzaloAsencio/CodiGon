@@ -12,7 +12,9 @@ export default function  PostPage()  {
   const {id} = useParams();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_PAGE}/post/${id}`)
+    fetch(`${process.env.REACT_APP_PAGE}/post/${id}`, {
+      mode: 'no-cors'
+    })
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
