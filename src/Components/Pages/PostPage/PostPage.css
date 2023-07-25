@@ -11,8 +11,10 @@
 .post-container >h2{
   margin-bottom: 0;
   padding-bottom: 0px;
+  font-family: 'Archivo Black', sans-serif;
 }
 .post-container > p{
+  font-family: 'Archivo Black', sans-serif;
   margin: 0;
 }
 .post-summary{
@@ -42,7 +44,7 @@
 
 @media screen and (min-width: 1140px) {
   .post-container{
-    padding: 0 120px;
+    padding: 0 250px;
 }
 
 }

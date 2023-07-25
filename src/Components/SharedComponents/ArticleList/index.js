@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Marker = styled.div`
+padding-top:1rem;
 padding-bottom:1rem;
 .headline{
     margin-left:1rem;
