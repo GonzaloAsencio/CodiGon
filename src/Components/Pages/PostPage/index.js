@@ -9,14 +9,11 @@ import LoadingPage from '../../SharedComponents/Loading/index';
 export default function  PostPage()  {
   const [postInfo,setPostInfo] = useState(null);
   const {userInfo} = useContext(UserContext);
+
   const {id} = useParams();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_PAGE}/post/${id}`, {
-      method: 'GET',
-      headers: new Headers({ 'Content-type': 'application/json'}),
-      mode: 'no-cors'
-    })
+    fetch(`${process.env.REACT_APP_PAGE}/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
