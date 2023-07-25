@@ -42,7 +42,7 @@ function Card({_id,title, summary,cover,color,icon}) {
 
 return (
     <TextAreaStyle layout initial={{'opacity':0, 'scale':0}} animate={{'opacity':1, 'scale':1}} exit={{'opacity':0, 'scale':0 }} transition={{'duration':0.2}} className='card' color={color} >
-       <a href={`tutorial/post/${_id}`}>
+       <a href={`/tutorial/post/${_id}`}>
         <div className='card-body'>
             <div className='card-icon-image'>
                     <img src={icon === 'Unity' ? unityIcon : csharpIncon } alt=''/>
