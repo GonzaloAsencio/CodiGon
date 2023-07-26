@@ -33,12 +33,29 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.content{
+  width: 100%;
+}
+.content > .ql-align-justify > strong > img {
+  width: 350px;
+}
+.content > .ql-align-justify > span> img {
+  width: 350px;
+}
 
 
 @media screen and (min-width: 720px) {
   .post-image > img{
     width: 100%;
   }
+
+  .content > .ql-align-justify > strong > img {
+    width: 100%;
+  }
+  .content > .ql-align-justify > span> img {
+    width: 100%;
+  }
+
 }
 
 
