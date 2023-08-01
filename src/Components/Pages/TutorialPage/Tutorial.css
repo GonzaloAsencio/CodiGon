@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    min-height: 100vh;
 }
 .all-cards-containter{
     width:100%;

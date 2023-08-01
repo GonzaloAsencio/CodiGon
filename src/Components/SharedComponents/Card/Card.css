@@ -119,7 +119,7 @@
     height: 200px;
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1370px) {
     .cards-error > img{
         width: 400px;
         height: 400px;
@@ -137,3 +137,4 @@
     }
 
 }
+
